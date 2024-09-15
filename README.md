@@ -1,2 +1,2 @@
 # Interfaces-TPE-Grupo12
-Se archivan las entregas del TPE de Interfaces_2024
+# Proyecto Interfaces de Usuario 2024: Sitio de Videojuegos Online
