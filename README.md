@@ -27,7 +27,7 @@ En esta página, se muestra un juego en modo de uso, permitiendo a los usuarios 
 - Pantalla completa del juego donde se lo puede observar como si estuviera en proceso de carga.
 - Información detallada del juego, como instrucciones de cómo jugarlo, descripción técnica, calificación, imágenes y un video que se ejecuta al apretar el símbolo de _play_.
 - Posibilidad de compartir por redes sociales y _email_.
-- Se cuenta con una sección de comentarios de usuarios (desplegable) y la posibilidad de escribir el comentario propio.
+- Se cuenta con una sección de comentarios de usuarios y la posibilidad de escribir el comentario propio.
 
 ### 3. Página de Registro y Login
 Enlace para registrarse si no tienen una cuenta. En esta sección se solicitan una serie de datos personales para completar el proceso de registro. En el caso de contar con una cuenta, se puede ingresar a la página de Inicio de Sesión, la que permite a los usuarios acceder a la plataforma ingresando su email y contraseña o por medio de las cuentas de Gmail o Facebook. Se ha diseñado con un enfoque en la simplicidad y accesibilidad.
