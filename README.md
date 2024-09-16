@@ -31,6 +31,7 @@ En esta página, se muestra un juego en modo de uso, permitiendo a los usuarios 
 
 ### 3. Página de Registro y Login
 Enlace para registrarse si no tienen una cuenta. En esta sección se solicitan una serie de datos personales para completar el proceso de registro. En el caso de contar con una cuenta, se puede ingresar a la página de Inicio de Sesión, la que permite a los usuarios acceder a la plataforma ingresando su email y contraseña o por medio de las cuentas de Gmail o Facebook. Se ha diseñado con un enfoque en la simplicidad y accesibilidad.
+
 **Características:**
 - Campo de ingreso de email y contraseña.
 - Botón de "Iniciar Sesión" y/o Registrarse
