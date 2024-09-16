@@ -22,6 +22,7 @@ La página de inicio ofrece una vista general de los productos recomendados y de
 
 ### 2. Página de Juego
 En esta página, se muestra un juego en modo de uso, permitiendo a los usuarios interactuar directamente con el contenido antes de realizar la compra. La temática elegida fue “4 en Línea: Goku vs. Sonic: Edición Épica”. Al juego se accede desde el Home al apretar el botón “Juega Gratis” y se encuentra ubicado en el carrusel Recomendados.
+
 **Características:**
 - Pantalla completa del juego donde se lo puede observar como si estuviera en proceso de carga.
 - Información detallada del juego, como instrucciones de cómo jugarlo, descripción técnica, calificación, imágenes y un video que se ejecuta al apretar el símbolo de _play_.
