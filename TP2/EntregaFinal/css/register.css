@@ -99,7 +99,7 @@ input[type="number"]::placeholder {
     color: #aaa;
 }
 
-input[type="submit"] {
+.registrarse a {
     width: 90%;
     padding: 10px;
     border: none;
@@ -109,9 +109,11 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
 }
 
-input[type="submit"]:hover {
+.registrarse a:hover {
     background-color: #0056b3;
 }
 
