@@ -1,0 +1,311 @@
+/* Restablecer el margen y padding del body */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Eliminar márgenes de los elementos principales */
+header, main, footer {
+    margin: 0;
+    padding: 0;
+}
+/*--------------------------------------------------HOME------------------------------------------------------*/
+
+/*----------------------------MOBILE------------------------*/
+
+/*--------------Header--------------*/
+header {
+    height: 68px;
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos a los extremos */
+    align-items: center; /* Alineación vertical */
+    padding: 10px 20px;
+    background-color: rgb(20, 20, 20); /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+/* Contenedor de la imagen */
+.menu-hamburgesa {
+    display: flex; /* Usar flex para centrar el icono */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Hacer que ocupe toda la altura del header */
+}
+
+.menu-hamburgesa i {
+    font-size: 40px; /* Aumentar el tamaño del icono */
+    color: #ffffff; /* Color del icono */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: color 0.3s; /* Transición suave para cambios de color */
+}
+
+.menu-hamburgesa i:hover {
+    color: #575858;
+}
+
+.logo {
+    display: flex; /* Usar flex para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.logo-imagen {
+    width: 60px; /* Ajustar el ancho de la imagen del logo (puedes cambiarlo según lo necesites) */
+    height: 60px; /* Mantener la proporción de la imagen */
+    border-radius: 100%;
+}
+
+.headerDer {
+    display: flex; /* Usar flex para el carrito */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.headerDer i {
+    font-size: 40px; /* Aumentar el tamaño del icono del carrito */
+    color: #ffffff; /* Color del icono */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: color 0.3s; /* Transición suave para cambios de color */
+}
+
+/* Cambiar color al hacer hover */
+.headerDer i:hover {
+    color: #575858; /* Color al pasar el mouse (ejemplo) */
+}
+
+/* Estilos del menú lateral */
+.menu-lateral {
+    width: 250px;
+    background-color: rgb(20, 20, 20);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-seccion {
+    margin-bottom: 20px;
+}
+
+/* Estilos de los botones del menú */
+.boton-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 2px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.boton-menu i {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.boton-menu:hover {
+    background-color: #666;
+}
+
+/* Sección de redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.link-redes {
+    color: white;
+    text-decoration: none;
+}
+
+.link-redes:hover {
+    text-decoration: underline;
+}
+
+/* Categorías de juegos */
+.categorias h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.boton-categoria {
+    display: block;
+    background-color: #008cff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    font-size: large;
+}
+
+.boton-categoria:hover {
+    background-color: #005fcc;
+}
+
+.titulo-categorias{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*--------------Main----------------*/
+main{
+    background-color: black;
+}
+/*--------------Footer--------------*/
+
+footer{
+    background-color: rgb(20, 20, 20);
+}
+
+.redesYpaises {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.redes, .paises {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    align-content: center;
+}
+
+.redes i {
+    font-size: 2rem; /* Tamaño de los íconos de redes sociales */
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+
+
+.redes i:hover {
+    color: #0077ff; /* Cambia el color de los íconos al pasar el mouse */
+}
+
+.paises img.bandera {
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.paises img.bandera:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+
+
+/* General container for both sections */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+}
+
+/* Support and community section */
+.soporteYcomunidad {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px; /* Spacing between blocks */
+}
+
+.soporte, .comunidad {
+    flex: 1;
+    color: white; /* White text for both sections */
+    text-align: center;
+}
+
+.soporte p, .comunidad p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Links inside the lists */
+.soporte ul, .comunidad ul, .linksUtiles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.soporte ul li, .comunidad ul li, .linksUtiles ul li {
+    color: white;
+    margin: 5px 0; /* Margin between each link */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.soporte ul li:hover, .comunidad ul li:hover, .linksUtiles ul li:hover {
+    color: #00aaff; /* Changes color on hover */
+}
+
+/* Links utiles section (below the support and community) */
+.linksUtiles {
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.linksUtiles ul li {
+    margin: 5px 0; /* Spacing for each link */
+    cursor: pointer;
+}
+
+.linksUtiles ul li:hover {
+    color: #00aaff; /* Changes color on hover */
+}
+
+/* Styling for the description section */
+.descripcionFinal {
+    text-align: center; /* Center the text */
+    color: white; /* White text color */
+    margin: 0 auto; /* Center the entire block horizontally */
+    max-width: 800px; /* Set a max-width to avoid stretching */
+    padding-left: 20px; /* Add some padding */
+    padding-right: 20px; /* Add some padding */
+    padding-bottom: 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded corners for a nicer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Heading styling */
+.descripcionFinal h3 {
+    font-size: 2rem; /* Larger heading font */
+    margin-bottom: 15px; /* Add space below heading */
+}
+
+/* Paragraph styling */
+.descripcionFinal p {
+    font-size: 1.2rem; /* Slightly larger paragraph font */
+    line-height: 1.6; /* Better line spacing for readability */
+    margin-bottom: 20px; /* Space between the paragraph and the logo */
+}
+
+/*----------------------------DEKSTOP------------------------*/
+
+/*--------------Header--------------*/
+/*--------------Main----------------*/
+/*--------------Footer--------------*/
+
+/*--------------------------------------------------JUEGO------------------------------------------------------*/
+
+/*--------------------------------------------------LOGIN------------------------------------------------------*/
+
+/*--------------------------------------------------REGISTER------------------------------------------------------*/
