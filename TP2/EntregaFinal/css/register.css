@@ -32,7 +32,7 @@ label {
     width: auto;
 }
 
-.ini{
+.ini, .cerrar{
     background-color: #5a5a5a;
     border-radius: 10px;
     color: #fff;
@@ -48,9 +48,6 @@ label {
     background-color: #4d4d4d;
 }
 
-form p{
-    color: #fff;
-}
 
 form {
     background-color: #202020;
@@ -88,7 +85,6 @@ input[type="number"] {
     border: none;
     border-radius: 5px;
     background-color: #fff;
-    color: #fff;
     box-sizing: border-box;
 }
 
@@ -99,7 +95,7 @@ input[type="number"]::placeholder {
     color: #aaa;
 }
 
-.registrarse a {
+.registrarse input {
     width: 90%;
     padding: 10px;
     border: none;
@@ -170,4 +166,13 @@ input[type="number"]::placeholder {
     flex-direction: column;
     padding-bottom: 70px;
     padding-top: 30px;
+}   
+
+.social-login p, 
+.footer p {
+    color: #fff;
+}
+
+#id_del_popover::backdrop{
+    background-color: rgba(0, 0, 0, 0.7);
 }

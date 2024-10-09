@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
 </head>
     <body>
-        <form action="#" method="post">
+        <form id="form">
             <div class="logo">
                 <img src="images/register/Logo-web-definido-circular.png" alt="">
             </div>
@@ -36,7 +37,7 @@
                 <!-- Repetir Contraseña -->
                 <label for="confirm-password">Repetir contraseña</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Repetir contraseña" >
-                </div>
+            </div>
 
             <!-- reCAPTCHA -->
             <div class="captcha">
@@ -45,8 +46,24 @@
     
             <!-- Botón de registro -->
             <div class="registrarse">
-                <a href="index.html">Registrarse</a>
+                <input type="submit" value="Registrarse">
             </div>
+            
+            <!-- -------------- -->
+            <!-- POPOVER -->
+
+            <div>
+                
+                    <div id="id_del_popover" popover="manual">
+                        <p>Su registro fue realizado exitosamente</p>
+                        <div class="button_container">
+                            <a class="cerrar" href="login.html">Cerrar</a>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- -------------- -->
+
             
             <!-- Opciones de redes sociales -->
             <div class="social-login">
@@ -78,5 +95,7 @@
             </p>
             </div>
         </form>
+
+    <script src="js/register.js"></script>
     </body>
 </html>

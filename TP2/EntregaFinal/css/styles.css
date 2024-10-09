@@ -304,6 +304,151 @@ footer{
 /*--------------Main----------------*/
 /*--------------Footer--------------*/
 
+/* Estilo general del pie de página */
+.footer-container {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #ddd; /* Color de texto claro */
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de las redes sociales */
+.social-media, .language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-media a img, .language-selector a img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%); /* Hace los íconos en escala de grises */
+    transition: filter 0.3s;
+}
+
+.social-media a img:hover, .language-selector a img:hover {
+    filter: grayscale(0%); /* Elimina la escala de grises al pasar el cursor */
+}
+
+/* Texto de bienvenida */
+.welcome-text {
+    margin: 20px 0;
+}
+
+.welcome-text h2 {
+    color: #fff; /* Título en blanco */
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    color: #bbb; /* Texto de párrafo claro */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Ícono central */
+.central-icon img {
+    width: 130px;
+        height: 100px;
+    margin: 20px 0;
+}
+
+/* Sección de enlaces de soporte y comunidad */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 30px 0;
+    font-size: 1rem;
+}
+
+.community, .support{
+    width: 50%;
+}
+
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.4rem;
+}
+
+
+.footer-links h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #fff; /* Cambia a blanco al pasar el cursor */
+}
+
+/* Derechos de autor y enlaces legales */
+.copyright {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.legal-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: #fff;
+}
+
+/* Botón para volver al inicio */
+.scroll-to-top{
+    display: none;
+}
+
+@media screen and (min: 1270px) {
+    .scroll-to-top a img {
+        filter: invert(100%); /* Hace el ícono blanco */
+        transition: transform 0.3s;
+    }
+    
+    .scroll-to-top a img:hover {
+        transform: translateY(-5px); /* Mueve el ícono hacia arriba al pasar el cursor */
+    }
+    
+    .servicios{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .abajo{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .scroll-to-top{
+        display: flex;
+        margin-right: 30px;
+        justify-content: right;
+    }
+
+}
+
+
 /*--------------------------------------------------JUEGO------------------------------------------------------*/
 
 /*--------------------------------------------------LOGIN------------------------------------------------------*/
