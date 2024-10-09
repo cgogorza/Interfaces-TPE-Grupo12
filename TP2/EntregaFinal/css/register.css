@@ -181,3 +181,17 @@ input[type="number"]::placeholder {
 #id_del_popover::backdrop{
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+#id_del_popover{
+    padding: 10px;
+    border: none;
+    position: absolute; 
+    background-color: #fff; 
+    color: #333; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    padding: 15px; 
+    width: 250px; 
+}
+
