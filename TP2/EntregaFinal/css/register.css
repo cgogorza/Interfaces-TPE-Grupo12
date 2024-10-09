@@ -44,6 +44,11 @@ label {
     text-decoration: none;
 }
 
+#id_del_popover{
+    /*aca*/
+    background-color: #0056b3;
+}
+
 .ini:hover {
     background-color: #4d4d4d;
 }

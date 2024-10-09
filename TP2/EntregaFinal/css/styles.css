@@ -420,20 +420,38 @@ footer{
     display: none;
 }
 
-@media screen and (min: 1270px) {
+@media screen and (min-width: 1270px) {
     .scroll-to-top a img {
         filter: invert(100%); /* Hace el ícono blanco */
         transition: transform 0.3s;
     }
     
     .scroll-to-top a img:hover {
-        transform: translateY(-5px); /* Mueve el ícono hacia arriba al pasar el cursor */
+        transform: translateY(-10px); /* Mueve el ícono hacia arriba al pasar el cursor */
     }
     
     .servicios{
         display: flex;
         justify-content: space-evenly;
     }
+
+    .footer-links{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .support{
+        display: grid;
+        justify-content: right;
+        margin-right: 50px;
+    }
+
+    .community{
+        display: grid;
+        justify-content: left;
+        margin-left: 50px;
+    }
+
     
     .abajo{
         display: flex;
@@ -442,8 +460,10 @@ footer{
     
     .scroll-to-top{
         display: flex;
-        margin-right: 30px;
-        justify-content: right;
+        margin-top: 30px;
+        justify-content: center;
+        background-size: cover; /* Asegúrate de que la imagen cubra todo el contenedor */
+        transition: background-image 0.5s ease; /* Transición suave */
     }
 
 }
