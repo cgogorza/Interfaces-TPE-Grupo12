@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    background-color: #f4f4f4;
+    color: #007AFF;
+}
+
+.encabezadoJuego{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 80px;
+}
+
+.encabezadoJuegoContainer{
+    display: flex;
+    width: 65%;
+    height: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.descripcionJuegoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    color: #007AFF;
+    margin-bottom: 10px;
+}
+
+.infoJuegoContainer{
+    display: flex;
+    align-items: center;
+}
+
+
+.breadcrumbs {
+    margin-right: 110px;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.thumbnail {
+    height: 56.26px;
+    width: 90.86px;
+    margin-right: 15px;
+}
+
+.navigation h1 {
+    font-size: 19px;
+    color: #007AFF;
+    margin-top: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stars {
+    font-size: 19px;
+    color: gold;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.votes {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+.like-dislike {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.like-dislike img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.juego{
+    width: 100%;
+    height: 512px;
+    background-color: #C6C6C1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    text-align: center;
+    width: 1096px;
+    height: 391px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.loading-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+}
