@@ -23,6 +23,7 @@ body {
 
 .encabezadoJuegoContainer{
     display: flex;
+    justify-content: center;
     width: 65%;
     height: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -111,6 +112,7 @@ body {
     height: 391px;
     border-radius: 15px;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .main-image img {
@@ -126,4 +128,68 @@ body {
     margin-top: 20px;
     font-size: 16px;
     color: #666;
+}
+
+.informacionGeneralContainer{
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1440px;
+    padding: 20px;
+}
+
+.comoJugarContainer {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 57%;
+    margin-right: 30px;
+    height: auto;
+}
+
+.box {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 25%;
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.comoJugarTitulo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comoJugarTitulo img {
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+    margin-right: 15px;
+    filter: invert(100%);
 }
