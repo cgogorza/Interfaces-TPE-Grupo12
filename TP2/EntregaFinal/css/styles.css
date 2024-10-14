@@ -2,12 +2,15 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #202020;
 }
 
 /* Eliminar márgenes de los elementos principales */
 header, main, footer {
     margin: 0;
     padding: 0;
+    background-color: #202020;
 }
 /*--------------------------------------------------HOME------------------------------------------------------*/
 
@@ -73,14 +76,21 @@ header {
     color: #575858; /* Color al pasar el mouse (ejemplo) */
 }
 
+
 /* Estilos del menú lateral */
 .menu-lateral {
     width: 250px;
-    background-color: rgb(20, 20, 20);
+    background-color: #202020;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1;
+    position: absolute; /* El navbar no ocupa espacio en el flujo */
+    top: 20; /* Posición en la parte superior de la página */
+    left: 20; /* Alineado a la izquierda */
+    border-radius: 0 10px 10px 0; /* Arriba derecha, abajo derecha, abajo izquierda, arriba izquierda */
+    transition: all 0.3s; /* Animación suave para mostrar/ocultar */
 }
 
 .menu-seccion {
@@ -102,6 +112,7 @@ header {
     text-align: left;
     border-radius: 5px;
     font-size: large;
+    padding-left: 28px;
 }
 
 .boton-menu i {
@@ -115,10 +126,9 @@ header {
 }
 
 /* Sección de redes sociales */
-.redes-sociales {
+.redesSociales {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 20px;
 }
 
 .link-redes {
@@ -137,11 +147,12 @@ header {
 }
 
 .boton-categoria {
-    display: block;
+    display: flex;
     background-color: #008cff;
     color: white;
     border: none;
-    padding: 10px;
+    padding-top: 8px;
+    padding-left: 50px;
     margin-bottom: 10px;
     text-align: center;
     border-radius: 20px;
@@ -158,6 +169,43 @@ header {
 .titulo-categorias{
     text-align: center;
     padding-bottom: 10px;
+}
+
+.iconoNav{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+
+.iconoNav img{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+.iconoAccionNav img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    padding-top: 4px;
+}
+
+.titulosCategoriasNav{
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.tituluSeccionNav{
+    padding-left: 10px;
+}
+
+.desactivar{
+    display: none;
+}
+
+.logo-desktop, .buscador{
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -236,7 +284,7 @@ header {
 
 /*--------------Main----------------*/
 main{
-    background-color: black;
+    background-color: #101014;
 }
 /*--------------Footer--------------*/
 

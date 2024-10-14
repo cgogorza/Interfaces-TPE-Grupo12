@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/juego.css">
+    <link rel="stylesheet" href="./css/Carrusel.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <title>4 en Línea: Goku vs. Sonic - Edición Épica</title>
 </head>
 <body>
     
+    
     <header>
         <div class="headerIzq">
           <nav class="menu-hamburgesa">
-            <i class="bi bi-list icono-menu-hamburguesa"></i>
+            <i class="bi bi-list icono-menu-hamburguesa" id="hamburger-menu"></i>
             <div class="logo-desktop">
                 <img src="./images/LogoApp.jpg" alt="Logo de la aplicación" class="logo-desktop-imagen">
                 <h2>LevenUp</h2>
@@ -33,45 +35,102 @@
         </div>
     </header>
 
-    <!-- <nav class="menu-lateral">
+    <nav class="menu-lateral desactivar" id="navbar"> <!--// class="menu-lateral desactivar" -->
         <div class="menu-seccion">
             <button class="boton-menu">
-                <i class="bi bi-person-square"></i>
-                <p>Tu Perfil</p>
+                <div class="iconoAccionNav">
+                    <img src="./images/Perfil.svg" alt="">
+                </div>
+                <p class="tituluSeccionNav">Tu Perfil</p>
             </button>
             <button class="boton-menu">
-                <i class="bi bi-house-fill"></i>
-                <p>Home</p>
+                <div class="iconoAccionNav">
+                    <img src="./images/Home.svg" alt="">
+                </div>
+                <p class="tituluSeccionNav">Home</p>
             </button>
             <button class="boton-menu">
-                <i class="bi bi-gear"></i>
-                <p>Configuración</p>
+                <div class="iconoAccionNav">
+                    <img src="./images/Opciones.svg" alt="">
+                </div>
+                <p class="tituluSeccionNav">Configuración</p>
             </button>
             <button class="boton-menu">
-                <i class="bi bi-x-square-fill"></i>
-                <p>Cerrar Sesion</p>
+                <div class="iconoAccionNav">
+                    <img src="./images/Close.svg" alt="">
+                </div>
+                <p class="tituluSeccionNav">Cerrar Sesion</p>
             </button>
         </div>
 
-        <div class="redes">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-whatsapp"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-twitter"></i>
+        <div class="redesSociales">
+            <img src="./images/instagram 2.png" alt="">
+            <img src="./images/logo-facebook 2.png" alt="">
+            <img src="./images/twiteer 2.png" alt="">
+            <img src="./images/whatsapp 2.png" alt="">
         </div>
 
         <div class="menu-seccion categorias">
             <h2 class="titulo-categorias">Categorías</h2>
-            <button class="boton-categoria">Aventuras</button>
-            <button class="boton-categoria">Acción</button>
-            <button class="boton-categoria">RPG</button>
-            <button class="boton-categoria">Cartas</button>
-            <button class="boton-categoria">Deportes</button>
-            <button class="boton-categoria">Guerra</button>
-            <button class="boton-categoria">Moda</button>
+            <button class="boton-categoria"> 
+                <div class="iconoNav">
+                    <img src="./images/Aventura.png" alt="">
+                </div>
+                <div class="titulosCategoriasNav">
+                    Aventura
+                </div>
+            </button>
+            <button class="boton-categoria">
+                <div class="iconoNav">
+                    <img src="./images/Accion.png" alt="">
+                </div>
+                <div class="titulosCategoriasNav">
+                    Accion
+                </div>
+            </button>
+            <button class="boton-categoria">
+                <div class="iconoNav">
+                    <img src="./images/RPG.png" alt="">
+                </div>
+                <div class="titulosCategoriasNav">
+                    RPG
+                </div>
+            </button>
+            <button class="boton-categoria">
+                <div class="iconoNav">
+                    <img src="./images/Cartas.png" alt="">
+                </div>
+                <div class="titulosCategoriasNav">
+                    Cartas
+                </div>
+            </button>
+            <button class="boton-categoria">
+                <div class="iconoNav">
+                    <img src="./images/Deportes.png" alt="">
+                </div>
+                <div class="titulosCategoriasNav">
+                    Deportes
+                </div>
+            </button>
+            <button class="boton-categoria">
+                <div class="iconoNav">
+                    <img src="./images/Guerra.png" alt="">
+                </div>
+                <div class="titulosCategoriasNav">
+                    Guerra
+                </div>
+            </button>
+            <button class="boton-categoria">
+                <div class="iconoNav">
+                    <img src="./images/Moda.png" alt="">
+                </div>
+                <div class="titulosCategoriasNav">
+                    Moda
+                </div>
+            </button>
         </div>
-    </nav> -->
-        
+    </nav>
+
     <main>
         <section class="encabezadoJuego">
                 <div class="encabezadoJuegoContainer">
@@ -174,7 +233,275 @@
                 <p>El contenido es apropiado para todas las edades. Puede incluir una mínima cantidad de animación y/o fantasía con violencia leve.</p>
                 <img src="images/clasificacionLogo.png" alt="Clasificación ESRB" class="esrb-rating">
             </div>
+      
         </section>
+
+        <section>
+            <div class="contenedor">
+                <div class="desplazarIzq" id="desplazarIzq">
+                    <img src="./images/Vector.svg" alt="">
+                </div>
+
+                <div class="conteinerCarrusel">
+                
+                    <h2 class="tituloCategoria">Recomendado</h2>
+            
+                    <div class="carrusel" id="carrusel">
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <button class="buttom">
+                                <p>Juega Gratis</p>
+                            </button>
+                        </div>
+                
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <div class="contenedorPrecioCarrito">
+                                <div class="precio">
+                                    $25000
+                                </div>
+                                <div class="carritoYiconoComprado">
+                                    <div class="accionIcono">
+                                        <div class="iconoComprado">
+                                            <img src="./images/tildeSeleccionado.svg" alt="">
+                                        </div>
+                                        <div class="car">
+                                            <img src="./images/CartPlus.svg" alt="">
+                                        </div>
+                                        <div class="closeIcono">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color: white;">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <button class="buttom">
+                                <p>Juega Gratis</p>
+                            </button>
+                        </div>
+
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <div class="contenedorPrecioCarrito">
+                                <div class="precio">
+                                    $25000
+                                </div>
+                                <div class="carritoYiconoComprado">
+                                    <div class="accionIcono">
+                                        <div class="iconoComprado">
+                                            <img src="./images/tildeSeleccionado.svg" alt="">
+                                        </div>
+                                        <div class="car">
+                                            <img src="./images/CartPlus.svg" alt="">
+                                        </div>
+                                        <div class="closeIcono">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color: white;">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <button class="buttom">
+                                <p>Juega Gratis</p>
+                            </button>
+                        </div>
+                
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <div class="contenedorPrecioCarrito">
+                                <div class="precio">
+                                    $25000
+                                </div>
+                                <div class="carritoYiconoComprado">
+                                    <div class="accionIcono">
+                                        <div class="iconoComprado">
+                                            <img src="./images/tildeSeleccionado.svg" alt="">
+                                        </div>
+                                        <div class="car">
+                                            <img src="./images/CartPlus.svg" alt="">
+                                        </div>
+                                        <div class="closeIcono">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color: white;">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <button class="buttom">
+                                <p>Juega Gratis</p>
+                            </button>
+                        </div>
+                
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <div class="contenedorPrecioCarrito">
+                                <div class="precio">
+                                    $25000
+                                </div>
+                                <div class="carritoYiconoComprado">
+                                    <div class="accionIcono">
+                                        <div class="iconoComprado">
+                                            <img src="./images/tildeSeleccionado.svg" alt="">
+                                        </div>
+                                        <div class="car">
+                                            <img src="./images/CartPlus.svg" alt="">
+                                        </div>
+                                        <div class="closeIcono">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color: white;">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <button class="buttom">
+                                <p>Juega Gratis</p>
+                            </button>
+                        </div>
+                        
+                        <div class="cardJuego">
+                            <img src="./images/Spiderman.jpg" alt="">
+                            <div class="juegoSeleccionado">
+                                <div class="alineacionParrafoYicono">
+                                    <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                                <div class="heart-icon">
+                                    <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                                </div>
+                                </div>
+                            </div>
+                            <h3>Spider-Man</h3>
+                            <div class="contenedorPrecioCarrito">
+                                <div class="precio">
+                                    $25000
+                                </div>
+                                <div class="carritoYiconoComprado">
+                                    <div class="accionIcono">
+                                        <div class="iconoComprado">
+                                            <img src="./images/tildeSeleccionado.svg" alt="">
+                                        </div>
+                                        <div class="car">
+                                            <img src="./images/CartPlus.svg" alt="">
+                                        </div>
+                                        <div class="closeIcono">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color: white;">
+                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <div class="desplazarDer" id="desplazarDer">
+                    <img src="./images/Vector derecha.svg" alt="">
+                </div>
+
+            </div>
+        </section>
+
         <section class="comentariosContainer">
             <div class="comentariosBoxContainer">
                 <div class="headerComentarios">
@@ -238,22 +565,15 @@
         
     </main>
 
-    <footer class="footer-container">
-        <div class="servicios">
-            <div class="social-media">
-                <a href="#"><img src="images/instagram 2.png" alt="Instagram"></a>
-                <a href="#"><img src="images/logo-facebook 2.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twiteer 2.png" alt="X"></a>
-                <a href="#"><img src="images/logo-gmail 2.png" alt="Gmail"></a>
-            </div>
     
-            <div class="language-selector">
-                <a href="#"><img src="images/flag_es 1.png" alt="Español"></a>
-                <a href="#"><img src="images/flag_en 1.png" alt="Inglés"></a>
-                <a href="#"><img src="images/flag_br.png" alt="Portugués"></a>
-                <a href="#"><img src="images/flag_it.png" alt="Italiano"></a>
-                <a href="#"><img src="images/flag_nl.png" alt="Neerlandés"></a>
-            </div>
+    <footer class="footer-container">
+
+        <div class="language-selector">
+            <a href="#"><img src="images/flag_es 1.png" alt="Español"></a>
+            <a href="#"><img src="images/flag_en 1.png" alt="Inglés"></a>
+            <a href="#"><img src="images/flag_br.png" alt="Portugués"></a>
+            <a href="#"><img src="images/flag_it.png" alt="Italiano"></a>
+            <a href="#"><img src="images/flag_nl.png" alt="Neerlandés"></a>
         </div>
 
         <div class="welcome-text">
@@ -276,6 +596,14 @@
                 </ul>
             </div>
 
+            <div class="social-media">
+                <h3>Seguinos por...</h3>
+                <a href="#"><img src="images/instagram 2.png" alt="Instagram"></a>
+                <a href="#"><img src="images/logo-facebook 2.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twiteer 2.png" alt="X"></a>
+                <a href="#"><img src="images/logo-gmail 2.png" alt="Gmail"></a>
+            </div>
+
             <div class="community">
                 <h3>Comunidad</h3>
                 <ul class="lista">
@@ -287,6 +615,7 @@
             </div>
         </div>
 
+
             <div class="copyright">
                 <p>2023 LevenUP. Todos los Derechos Reservados.</p>
                 <div class="legal-links">
@@ -295,13 +624,16 @@
                     <a href="#">Declaración de Privacidad</a> |
                     <a href="#">Contacto</a>
                 </div>
-                <div class="scroll-to-top">
-                    <a href="#top"><img class="scroll-to-top-img" src="images/up-arrow-png-27174-Windows.ico" alt="Volver al inicio"></a>
-                </div>
+
+                <a href="#" class="scroll-to-top">
+                    <img src="images/scrolltotop.svg" alt="Volver al inicio">
+                </a>
             </div>
     
     </footer>
 
     <script src="js/juego.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/Carrusel.js"></script>
 </body>
 </html>
