@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="./css/Carrusel.css">
+    <link rel="stylesheet" href="./css/Buttom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <title>LevenUP</title>
 </head>
@@ -34,7 +35,7 @@
 
     <nav class="menu-lateral desactivar" id="navbar"> <!--// class="menu-lateral desactivar" -->
         <div class="menu-seccion">
-            <button class="boton-menu">
+            <button class="boton-menu" >
                 <div class="iconoAccionNav">
                     <img src="./images/Perfil.svg" alt="">
                 </div>
@@ -52,7 +53,7 @@
                 </div>
                 <p class="tituluSeccionNav">Configuración</p>
             </button>
-            <button class="boton-menu" onclick="cerrarSesion()">
+            <button class="boton-menu" onclick="cerrarSesion()" id="ButtomStyle1">
                 <div class="iconoAccionNav">
                     <img src="./images/Close.svg" alt="">
                 </div>
@@ -61,15 +62,15 @@
         </div>
 
         <div class="redesSociales">
-            <img src="./images/instagram 2.png" alt="">
-            <img src="./images/logo-facebook 2.png" alt="">
-            <img src="./images/twiteer 2.png" alt="">
-            <img src="./images/whatsapp 2.png" alt="">
+            <img class="iconoRedes" src="./images/instagram 2.png" alt="">
+            <img class="iconoRedes" src="./images/logo-facebook 2.png" alt="">
+            <img class="iconoRedes" src="./images/twiteer 2.png" alt="">
+            <img class="iconoRedes" src="./images/whatsapp 2.png" alt="">
         </div>
 
         <div class="menu-seccion categorias">
             <h2 class="titulo-categorias">Categorías</h2>
-            <button class="boton-categoria"> 
+            <button class="boton-categoria" id="ButtomStyle2"> 
                 <div class="iconoNav">
                     <img src="./images/Aventura.png" alt="">
                 </div>
@@ -77,7 +78,7 @@
                     Aventura
                 </div>
             </button>
-            <button class="boton-categoria">
+            <button class="boton-categoria" id="ButtomStyle2">
                 <div class="iconoNav">
                     <img src="./images/Accion.png" alt="">
                 </div>
@@ -85,7 +86,7 @@
                     Accion
                 </div>
             </button>
-            <button class="boton-categoria">
+            <button class="boton-categoria" id="ButtomStyle2">
                 <div class="iconoNav">
                     <img src="./images/RPG.png" alt="">
                 </div>
@@ -93,7 +94,7 @@
                     RPG
                 </div>
             </button>
-            <button class="boton-categoria">
+            <button class="boton-categoria" id="ButtomStyle2">
                 <div class="iconoNav">
                     <img src="./images/Cartas.png" alt="">
                 </div>
@@ -101,7 +102,7 @@
                     Cartas
                 </div>
             </button>
-            <button class="boton-categoria">
+            <button class="boton-categoria" id="ButtomStyle2">
                 <div class="iconoNav">
                     <img src="./images/Deportes.png" alt="">
                 </div>
@@ -109,7 +110,7 @@
                     Deportes
                 </div>
             </button>
-            <button class="boton-categoria">
+            <button class="boton-categoria" id="ButtomStyle2">
                 <div class="iconoNav">
                     <img src="./images/Guerra.png" alt="">
                 </div>
@@ -117,7 +118,7 @@
                     Guerra
                 </div>
             </button>
-            <button class="boton-categoria">
+            <button class="boton-categoria" id="ButtomStyle2">
                 <div class="iconoNav">
                     <img src="./images/Moda.png" alt="">
                 </div>
@@ -141,7 +142,7 @@
     
             <div class="carrusel" id="carrusel">
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Minecraft.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -150,14 +151,14 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
-                    <button class="buttom">
+                    <h3>Minecraft</h3>
+                    <button class="buttom" id="ButtomStyle3">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
         
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Fifa.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -166,7 +167,7 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>FIFA 23</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
                             $25000
@@ -190,7 +191,7 @@
                 </div>
 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/SonyVSGoku.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -199,14 +200,14 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
-                    <button class="buttom">
+                    <h3>4 en Linea GokuVs..</h3>
+                    <button class="buttom" id="ButtomStyle3">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/The Last of US.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -215,10 +216,10 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>The last of US Part 2</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
-                            $25000
+                            $45000
                         </div>
                         <div class="carritoYiconoComprado">
                             <div class="accionIcono">
@@ -239,7 +240,7 @@
                 </div>
 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Resident Evil 4.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -248,8 +249,8 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
-                    <button class="buttom">
+                    <h3>Crash Bandicoot</h3>
+                    <button class="buttom" id="ButtomStyle3">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
@@ -267,7 +268,7 @@
                     <h3>Spider-Man</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
-                            $25000
+                            $15000
                         </div>
                         <div class="carritoYiconoComprado">
                             <div class="accionIcono">
@@ -288,7 +289,7 @@
                 </div>
         
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Dragon Ball z t4.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -297,14 +298,14 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
-                    <button class="buttom">
+                    <h3>Dragon Ball Z Ten..</h3>
+                    <button class="buttom" id="ButtomStyle3">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
         
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Until Dawn.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -313,10 +314,10 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>Until Dawn</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
-                            $25000
+                            $23000
                         </div>
                         <div class="carritoYiconoComprado">
                             <div class="accionIcono">
@@ -337,7 +338,7 @@
                 </div>
         
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/God of War.jpg" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -346,14 +347,14 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
-                    <button class="buttom">
+                    <h3>GOD OF WAR</h3>
+                    <button class="buttom" id="ButtomStyle3">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
                 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Resident Evil 2.jpg" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -362,10 +363,10 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>Resident Evil 2</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
-                            $25000
+                            $13000
                         </div>
                         <div class="carritoYiconoComprado">
                             <div class="accionIcono">
@@ -669,7 +670,7 @@
     
             <div class="carrusel" id="carrusel">
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Minecraft.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -678,14 +679,14 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>Minecraft</h3>
                     <button class="buttom">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
         
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/horizon.jpg" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -694,7 +695,7 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>horizon</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
                             $25000
@@ -718,7 +719,7 @@
                 </div>
 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/GTA.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -727,14 +728,14 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>GTA</h3>
                     <button class="buttom">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Elden Ring.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -743,10 +744,10 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>Elden Ring</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
-                            $25000
+                            $28000
                         </div>
                         <div class="carritoYiconoComprado">
                             <div class="accionIcono">
@@ -767,7 +768,7 @@
                 </div>
 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Crash.png" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -776,7 +777,56 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>Crash Bandicoot 4</h3>
+                    <button class="buttom">
+                        <p>Juega Gratis</p>
+                    </button>
+                </div>
+        
+                <div class="cardJuego">
+                    <img src="./images/Dragon Ball z t4.png" alt="">
+                    <div class="juegoSeleccionado">
+                        <div class="alineacionParrafoYicono">
+                            <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                        <div class="heart-icon">
+                            <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <h3>Dragon Ball z Ten..</h3>
+                    <div class="contenedorPrecioCarrito">
+                        <div class="precio">
+                            $25000
+                        </div>
+                        <div class="carritoYiconoComprado">
+                            <div class="accionIcono">
+                                <div class="iconoComprado">
+                                    <img src="./images/tildeSeleccionado.svg" alt="">
+                                </div>
+                                <div class="car">
+                                    <img src="./images/CartPlus.svg" alt="">
+                                </div>
+                                <div class="closeIcono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color: white;">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="cardJuego">
+                    <img src="./images/Sonic.png" alt="">
+                    <div class="juegoSeleccionado">
+                        <div class="alineacionParrafoYicono">
+                            <p class="tamanioParrafoJuegoBase">Juego Base</p>
+                        <div class="heart-icon">
+                            <i class="bi bi-heart" onclick="toggleLike(this)"></i>
+                        </div>
+                        </div>
+                    </div>
+                    <h3>Sonic</h3>
                     <button class="buttom">
                         <p>Juega Gratis</p>
                     </button>
@@ -816,7 +866,7 @@
                 </div>
         
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/KAIJU.jpg" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -825,63 +875,14 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
-                    <button class="buttom">
-                        <p>Juega Gratis</p>
-                    </button>
-                </div>
-        
-                <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
-                    <div class="juegoSeleccionado">
-                        <div class="alineacionParrafoYicono">
-                            <p class="tamanioParrafoJuegoBase">Juego Base</p>
-                        <div class="heart-icon">
-                            <i class="bi bi-heart" onclick="toggleLike(this)"></i>
-                        </div>
-                        </div>
-                    </div>
-                    <h3>Spider-Man</h3>
-                    <div class="contenedorPrecioCarrito">
-                        <div class="precio">
-                            $25000
-                        </div>
-                        <div class="carritoYiconoComprado">
-                            <div class="accionIcono">
-                                <div class="iconoComprado">
-                                    <img src="./images/tildeSeleccionado.svg" alt="">
-                                </div>
-                                <div class="car">
-                                    <img src="./images/CartPlus.svg" alt="">
-                                </div>
-                                <div class="closeIcono">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16" style="color: white;">
-                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
-                    <div class="juegoSeleccionado">
-                        <div class="alineacionParrafoYicono">
-                            <p class="tamanioParrafoJuegoBase">Juego Base</p>
-                        <div class="heart-icon">
-                            <i class="bi bi-heart" onclick="toggleLike(this)"></i>
-                        </div>
-                        </div>
-                    </div>
-                    <h3>Spider-Man</h3>
+                    <h3>KAIJU</h3>
                     <button class="buttom">
                         <p>Juega Gratis</p>
                     </button>
                 </div>
                 
                 <div class="cardJuego">
-                    <img src="./images/Spiderman.jpg" alt="">
+                    <img src="./images/Pacific rit.jpg" alt="">
                     <div class="juegoSeleccionado">
                         <div class="alineacionParrafoYicono">
                             <p class="tamanioParrafoJuegoBase">Juego Base</p>
@@ -890,10 +891,10 @@
                         </div>
                         </div>
                     </div>
-                    <h3>Spider-Man</h3>
+                    <h3>Pacific Rit</h3>
                     <div class="contenedorPrecioCarrito">
                         <div class="precio">
-                            $25000
+                            $5000
                         </div>
                         <div class="carritoYiconoComprado">
                             <div class="accionIcono">

@@ -131,6 +131,11 @@ header {
     justify-content: space-evenly;
 }
 
+.iconoRedes{
+    height: 40px;
+    width: 40px;
+}
+
 .link-redes {
     color: white;
     text-decoration: none;

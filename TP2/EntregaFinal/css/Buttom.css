@@ -1,0 +1,88 @@
+
+/* Estilos para los botones */
+button {
+    border: none; /* Sin borde */
+    font-size: 18px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    position: relative; /* Necesario para el efecto de carga */
+    overflow: hidden; /* Esconde el efecto de carga fuera del botón */
+    color: white; /* Color de texto */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    outline: none; /* Sin borde de enfoque */
+}
+
+/* Estilo para el Botón Loco 1 */
+#ButtomStyle1 {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Sombra por defecto */
+}
+
+#ButtomStyle1:hover {
+    animation: shake 0.5s; /* Sacudida */
+    background-color: #f64821; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5); /* Sombra más fuerte */
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 0); }
+    25% { transform: translate(-1px, 0); }
+    50% { transform: translate(1px, 0); }
+    75% { transform: translate(-1px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Estilo para el Botón Loco 2 */
+#ButtomStyle2 {
+    background-color: #007AFF; /* Color de fondo */
+}
+
+#ButtomStyle2:hover {
+    animation: spin 1s; /* Giro */
+    background-color: #0062CB; /* Color de fondo al pasar el ratón */
+    transform: scale(1.1); /* Escalar */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5); /* Sombra más fuerte */
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Estilo para el Botón Loco 3 */
+#ButtomStyle3 {
+    background-color: #007AFF; /* Color de fondo */
+}
+
+#ButtomStyle3:hover {
+    animation: pulsate 0.5s infinite; /* Pulsar */
+    background-color: #0062CB; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5); /* Sombra más fuerte */
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Efecto de "brillo" en el hover */
+#ButtomStyle1::after, #ButtomStyle2::after, #ButtomStyle3::after {
+    content: '';
+    position: absolute; /* Posicionamiento absoluto para el efecto */
+    width: 300%; /* Asegurarse de que cubra el botón */
+    height: 300%; /* Asegurarse de que cubra el botón */
+    top: 50%; /* Centrando el efecto */
+    left: 50%; /* Centrando el efecto */
+    background: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad */
+    border-radius: 50%; /* Redondear el efecto */
+    transform: translate(-50%, -50%) scale(0); /* Iniciar con escala 0 */
+    transition: transform 0.5s, opacity 0.5s; /* Transición suave */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+#ButtomStyle1:hover::after, #ButtomStyle2:hover::after, #ButtomStyle3:hover::after {
+    transform: translate(-50%, -50%) scale(1); /* Aumentar la escala en hover */
+    z-index: 1; /* Asegurar que esté en la parte superior */
+    opacity: 1; /* Hacer visible el efecto */
+}
+
+
