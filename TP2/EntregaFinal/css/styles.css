@@ -312,7 +312,7 @@ footer{
 }
 
 /* Estilo de las redes sociales */
-.social-media, .language-selector {
+.language-selector {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -325,8 +325,12 @@ footer{
 }
 
 .social-media{
-    display: flex;
-    flex-direction: column;
+    width: 12%;
+}
+
+.social-media img{
+    margin-top: 15px;
+    margin-left: 20px;
 }
 
 /* Texto de bienvenida */
