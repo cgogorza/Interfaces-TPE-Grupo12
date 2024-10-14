@@ -160,82 +160,6 @@ header {
     padding-bottom: 10px;
 }
 
-@media (min-width: 768px) {
-
-    .logo{
-        display: none;
-    }
-
-    .menu-hamburgesa .icono-menu-hamburguesa{
-        font-size: 32px;
-    }
-
-    .headerDer .icono-carrito{
-        font-size: 41px;
-    }
-
-    header {
-        display: flex;
-        align-items: center;
-        background-color: #202020;
-        padding: 0px 55px;
-    }
-
-    .headerIzq, .logo-desktop, .buscador, .headerDer {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo-desktop-imagen {
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-    }
-
-    .logo-desktop{
-        margin-left: 40px;
-    }
-
-    .logo-desktop h2 {
-        margin-left: 10px;
-        font-size: 25px;
-        font-weight: normal;
-        line-height: 40px;
-        color: white;
-    }
-
-    .buscador {
-        flex-grow: 1;
-        max-width: 703px;
-        height: 46px;
-        position: relative;
-        margin-right: 180px;
-    }
-
-    .input-buscar {
-        width: 100%;
-        padding: 10px 40px 10px 15px;
-        border: 1.5px solid #ffffff;
-        background-color: #000000;
-        border-radius: 5px;
-        color: white;
-        font-size: 16px;
-    }
-
-    .buscador i {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        font-size: 20px;
-        cursor: pointer;
-    }
-
-}
-
-
-
 /*--------------Main----------------*/
 main{
     background-color: black;
@@ -388,7 +312,7 @@ footer{
 }
 
 /* Estilo de las redes sociales */
-.social-media, .language-selector {
+.language-selector {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -401,8 +325,12 @@ footer{
 }
 
 .social-media{
-    display: flex;
-    flex-direction: column;
+    width: 12%;
+}
+
+.social-media img{
+    margin-top: 15px;
+    margin-left: 20px;
 }
 
 /* Texto de bienvenida */
