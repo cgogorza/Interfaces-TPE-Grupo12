@@ -416,6 +416,11 @@ ul {
     font-size: 25px;
 }
 
+textarea::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
 .iconComentario {
     width: 68px;
     height: 57;

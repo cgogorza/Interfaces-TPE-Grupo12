@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/juego.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <title>4 en Línea: Goku vs. Sonic - Edición Épica</title>
+</head>
+<body>
+    
+    <header>
+        <div class="headerIzq">
+          <nav class="menu-hamburgesa">
+            <i class="bi bi-list icono-menu-hamburguesa"></i>
+            <div class="logo-desktop">
+                <img src="./images/LogoApp.jpg" alt="Logo de la aplicación" class="logo-desktop-imagen">
+                <h2>LevenUp</h2>
+            </div>
+          </nav>
+        </div>
+        <div class="logo">
+          <img src="./images/LogoApp.jpg" alt="Logo de la aplicación" class="logo-imagen">
+        </div>
+        <div class="buscador">
+            <input type="text" value="Buscar" class="input-buscar">
+            <i class="bi bi-search"></i>
+        </div>
+        <div class="headerDer">
+            <i class="bi bi-cart-plus icono-carrito"></i>
+        </div>
+    </header>
+
+    <!-- <nav class="menu-lateral">
+        <div class="menu-seccion">
+            <button class="boton-menu">
+                <i class="bi bi-person-square"></i>
+                <p>Tu Perfil</p>
+            </button>
+            <button class="boton-menu">
+                <i class="bi bi-house-fill"></i>
+                <p>Home</p>
+            </button>
+            <button class="boton-menu">
+                <i class="bi bi-gear"></i>
+                <p>Configuración</p>
+            </button>
+            <button class="boton-menu">
+                <i class="bi bi-x-square-fill"></i>
+                <p>Cerrar Sesion</p>
+            </button>
+        </div>
+
+        <div class="redes">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+        </div>
+
+        <div class="menu-seccion categorias">
+            <h2 class="titulo-categorias">Categorías</h2>
+            <button class="boton-categoria">Aventuras</button>
+            <button class="boton-categoria">Acción</button>
+            <button class="boton-categoria">RPG</button>
+            <button class="boton-categoria">Cartas</button>
+            <button class="boton-categoria">Deportes</button>
+            <button class="boton-categoria">Guerra</button>
+            <button class="boton-categoria">Moda</button>
+        </div>
+    </nav> -->
+        
+    <main>
+        <section class="encabezadoJuego">
+                <div class="encabezadoJuegoContainer">
+                    <div class="descripcionJuegoContainer">
+                        <div class="navigation">
+                            <h1>¡Bienvenido al Campo de Batalla de "4 en Línea: Goku vs. Sonic - Edición Épica"!</h1>
+                        </div>
+                        <div class="infoJuegoContainer">
+                            <span class="breadcrumbs">Inicio > Juegos > Recomendados > 4 en Línea Edición Épica</span>
+                            <span class="stars">★★★★<span class="starGray">☆</span></span>
+                            <div class="like-dislike">
+                                <img src="images/like.png" alt="Like">
+                                <span class="votes">4.1 - 472 votos</span>
+                                <img src="images/dislikee.png" alt="Dislike">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rating">
+                    
+                </div>
+        </section>
+        <section class="juego">
+            <div class="main-image">
+                <img src="images/portada4EnLinea.jpg" alt="Goku vs Sonic">
+            </div>
+
+            <div class="loading-bar" id="loadingBar">
+                <span class="loading-text" id="loadingText">loading...</span>
+            </div>
+        </section>
+        <section class="informacionGeneralContainer">
+                <div class="comoJugarContainer">
+                    <div class="comoJugarTitulo">
+                        <img class="iconoInfo" src="images/iconoInfo.png" alt="information">
+                        <h2>¿Cómo Jugar a 4 en Línea?</h2>
+                    </div>
+                    <div class="textoConVerMas">
+                        <p>
+                            ¡Comienza una batalla de dos poderosos y sobrevalorados personajes, <span class="link">Goku</span> el sayajin de <span class="link">Dragon Ball</span> contra <span class="link">Sonic</span>, el erizo azul de Sega!<br>
+                            En este <span class="link">juego en línea</span>, tus personajes favoritos como Goku y Sonic lideran tus tropas.<br>
+                            El objetivo es formar una fila de 4 estandartes de tu héroe en cualquier dirección: vertical, horizontal o diagonal antes que tu rival, para que así tu personaje favorito pueda vencer al enemigo.<br>
+                            Selecciona una casilla: Haz clic en el lugar donde quieres desplegar tu estandarte. Cada estandarte representa un guerrero en tu ejército.<br>
+                            Alinea tus tropas: Tu objetivo es colocar cuatro estandartes consecutivos. Puedes hacerlo en línea vertical, horizontal o diagonal.<br>
+                            Bloquea a tu rival: No solo te enfoques en tu estrategia, también presta atención a los movimientos de tu oponente. Si ves que está a punto de alinear 4 fichas, ¡intercepta su jugada!<br>
+                            Gana la batalla: El primer jugador en formar una fila de 4 estandartes gana la partida y asegura la victoria para su equipo de héroes.<br>
+                            ¡Recuerda que cada movimiento cuenta! Piensa rápido y actúa con precisión.
+                        </p>
+                        <h5 id="txtVerMas" class="link">Ver más +</h5>
+                    </div>
+                    
+                </div>
+        
+                <div class="especificacionesJuegoContainer">
+                    <h2 id="tituloJuegoEspecificaciones">4 en Línea: Goku vs. Sonic - Edición Épica</h2>
+                    <ul>
+                        <li><span>Desarrolladores:</span> Dreamers Team</li>
+                        <li><span>Publicado en:</span> marzo de 2021</li>
+                        <li><span>Tecnología:</span> HTML5</li>
+                        <li><span>Plataforma:</span> Browser (desktop, mobile, tablet)</li>
+                        <li><span>Clasificación:</span> IO. Alligator</li>
+                        <li><span>Páginas Web:</span> Fandom</li>
+                        <li><span>¿Cuáles son los Modos De Juego?</span></li>
+                        <li>- Creative</li>
+                        <li>- Survival</li>
+                        <li>- Five Blocks</li>
+                        <li>- Hide and Seek</li>
+                    </ul>
+                </div>
+        </section>
+        <section class="contenidoRelacionadoContainer">
+            <div class="contenidoVisualContainer">
+                <div class="videoRelacionadoContainer">
+                    <div class="videoWrapper">
+                        <video class="videoRelacionado" src="Videos/-fb9e-4884-98d3-b5a727a2f4bb.mp4" controls></video>
+                    </div>
+                    <h4>4 en Línea: Goku vs. Sonic - Edición Épica</h4>
+                </div>
+                <div class="imagenesRelacionadasContainer">
+                    <h3 class="tituloImagenes">Imágenes Del Juego</h3> <!-- Título agregado aquí -->
+                    <div class="imagenesGrid"> <!-- Contenedor para las imágenes -->
+                        <img src="images/gokuSonic.jpg" alt="">
+                        <img src="images/sonic.jpg" alt="">
+                        <img src="images/gokuPeleando.jpg" alt="">
+                        <img src="images/gokuSonic2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="compartirEnRedesContainer">
+                <h3>Compartir</h3>
+                <div class="redesSociales">
+                    <a href="#"><img src="images/instagram 2.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/logo-facebook 2.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/twiteer 2.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/logo-gmail 2.png" alt="Gmail"></a>
+                    <a href="#"><img src="images/whatsapp 1.png" alt="WhatsApp"></a>
+                </div>
+                <h3>Clasificación</h3>
+                <p>El contenido es apropiado para todas las edades. Puede incluir una mínima cantidad de animación y/o fantasía con violencia leve.</p>
+                <img src="images/clasificacionLogo.png" alt="Clasificación ESRB" class="esrb-rating">
+            </div>
+        </section>
+        <section class="comentariosContainer">
+            <div class="comentariosBoxContainer">
+                <div class="headerComentarios">
+                    <img src="images/iconoComentario.png" alt="Icono de Comentarios" class="iconComentario">
+                    <h1>Comentarios</h1>
+                </div>
+                
+                <div class="boxComentarios">
+                    <p class="login-warning">Debes registrarte para comentar</p>
+                </div>
+                
+                <div class="comentario">
+                    <div class="infoUsuario">
+                        <img src="images/avatar1.png" alt="Avatar de usuario" class="avatar">
+                        <span class="username">Tú</span>
+                    </div>
+                    <div class="contenidoComentario">
+                        <textarea placeholder="¿Qué opinás de este juego?"></textarea>
+                        <span class="date">08/09/2024</span>
+                    </div>
+                </div>
+        
+                <div class="comentario">
+                    <div class="infoUsuario">
+                        <img src="images/avatar2.png" alt="Avatar de usuario" class="avatar">
+                        <span class="username">martx09</span>
+                    </div>
+                    <div class="contenidoComentario">
+                        <p>Banco Full a Goku!!! Fuera Sonic !!!!!!!!!!!!!!!!</p>
+                        <span class="date">31/08/2024</span>
+                    </div>
+                </div>
+        
+                <div class="comentario">
+                    <div class="infoUsuario">
+                        <img src="images/avatar3.png" alt="Avatar de usuario" class="avatar">
+                        <span class="username">Mr. Bean87</span>
+                    </div>
+                    <div class="contenidoComentario">
+                        <p>Es el mejor juego de LevenUP !!!!!!!!!!!!!!!!</p>
+                        <span class="date">26/07/2024</span>
+                    </div>
+                </div>
+        
+                <div class="comentario">
+                    <div class="infoUsuario">
+                        <img src="images/avatar4.png" alt="Avatar de usuario" class="avatar">
+                        <span class="username">Nicki</span>
+                    </div>
+                    <div class="contenidoComentario">
+                        <p>This site is amazing !!!!!!!!!!!!!</p>
+                        <span class="date">12/06/2024</span>
+                    </div>
+                </div>
+                <div class="verMasComentariosContainer">
+                    <a href="#" class="verMasComentarios">Ver más comentarios +</a>
+                </div>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer class="footer-container">
+        <div class="servicios">
+            <div class="social-media">
+                <a href="#"><img src="images/instagram 2.png" alt="Instagram"></a>
+                <a href="#"><img src="images/logo-facebook 2.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twiteer 2.png" alt="X"></a>
+                <a href="#"><img src="images/logo-gmail 2.png" alt="Gmail"></a>
+            </div>
+    
+            <div class="language-selector">
+                <a href="#"><img src="images/flag_es 1.png" alt="Español"></a>
+                <a href="#"><img src="images/flag_en 1.png" alt="Inglés"></a>
+                <a href="#"><img src="images/flag_br.png" alt="Portugués"></a>
+                <a href="#"><img src="images/flag_it.png" alt="Italiano"></a>
+                <a href="#"><img src="images/flag_nl.png" alt="Neerlandés"></a>
+            </div>
+        </div>
+
+        <div class="welcome-text">
+            <h2>Encuentra los Mejores Juegos en Línea</h2>
+            <p>Descubre una increíble colección de juegos online para todas las edades. Podrás disfrutar de juegos de aventuras, acción, RPG, cartas, etc. ¿Prefieres juegos de guerra o ayudar a tus personajes favoritos? ¡Explora nuestro catálogo y diviértete al máximo!</p>
+        </div>
+
+        <div class="central-icon">
+            <img src="images/Logo-web-definido-circular.png" alt="Ícono central">
+        </div>
+
+        <div class="footer-links">
+            <div class="support">
+                <h3>Soporte</h3>
+                <ul class="lista">
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Seguridad</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Términos de Devoluciones</a></li>
+                </ul>
+            </div>
+
+            <div class="community">
+                <h3>Comunidad</h3>
+                <ul class="lista">
+                    <li><a href="#">Foros</a></li>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Amigos</a></li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="copyright">
+                <p>2023 LevenUP. Todos los Derechos Reservados.</p>
+                <div class="legal-links">
+                    <a href="#">Acerca de LevenUP</a> |
+                    <a href="#">Términos de Uso</a> |
+                    <a href="#">Declaración de Privacidad</a> |
+                    <a href="#">Contacto</a>
+                </div>
+                <div class="scroll-to-top">
+                    <a href="#top"><img class="scroll-to-top-img" src="images/up-arrow-png-27174-Windows.ico" alt="Volver al inicio"></a>
+                </div>
+            </div>
+    
+    </footer>
+
+    <script src="js/juego.js"></script>
+</body>
+</html>
