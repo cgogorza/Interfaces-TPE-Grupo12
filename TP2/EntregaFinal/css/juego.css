@@ -1,19 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-weight: 400;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    background-color: #f4f4f4;
-    color: #007AFF;
+    font-family: Arial;
+    background-color: #000000;
 }
 
 .encabezadoJuego{
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,18 +19,14 @@ body {
 .encabezadoJuegoContainer{
     display: flex;
     justify-content: center;
-    width: 65%;
-    height: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
 }
 
 .descripcionJuegoContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 14px;
     color: #007AFF;
-    margin-bottom: 10px;
 }
 
 .infoJuegoContainer{
@@ -45,9 +36,11 @@ body {
 
 
 .breadcrumbs {
-    margin-right: 110px;
+    margin-right: 65px;
     font-size: 12px;
+    font-weight: 400;
     margin-bottom: 5px;
+    color: #007AFF;
 }
 
 .thumbnail {
@@ -58,6 +51,8 @@ body {
 
 .navigation h1 {
     font-size: 19px;
+    font-weight: 400;
+    font-style: normal;
     color: #007AFF;
     margin-top: 10px;
 }
@@ -74,7 +69,12 @@ body {
     color: gold;
     text-align: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 63px;
+}
+
+.starGray{
+    color: gray;
+    padding: 0 2px;
 }
 
 .votes {
@@ -84,7 +84,6 @@ body {
 }
 
 .like-dislike {
-    margin-left: 10px;
     display: flex;
     align-items: center;
 }
@@ -97,20 +96,19 @@ body {
 }
 
 .juego{
-    width: 100%;
     height: 512px;
     background-color: #C6C6C1;
-    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .main-image {
     text-align: center;
     width: 1096px;
     height: 391px;
-    border-radius: 15px;
     overflow: hidden;
     margin-bottom: 40px;
 }
@@ -123,11 +121,38 @@ body {
     border-radius: 15px;
 }
 
+.loading-bar {
+    width: 400px;
+    height: 18px;
+    background-color: #d3d3d3;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-bar::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    animation: loadingAnimation 8s linear forwards;
+    border-radius: 15px;
+}
+
 .loading-text {
-    text-align: center;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
     font-size: 16px;
-    color: #666;
+    color: black;
+}
+
+@keyframes loadingAnimation {
+    0% { width: 0%; }
+    100% { width: 100%; }
 }
 
 .informacionGeneralContainer{
@@ -135,30 +160,51 @@ body {
     color: #fff;
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
-.container {
-    display: flex;
-    gap: 20px;
-    max-width: 1440px;
-    padding: 20px;
+.informacionGeneralContainer p{
+    font-size: 14px;
 }
 
 .comoJugarContainer {
     background-color: #333;
     border-radius: 10px;
     padding: 20px;
-    width: 57%;
+    width: 67%;
     margin-right: 30px;
-    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.box {
+.comoJugarTitulo h2{
+    font-size: 19px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.especificacionesJuegoContainer {
     background-color: #333;
     border-radius: 10px;
     padding: 20px;
-    width: 25%;
+    width: 21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.especificacionesJuegoContainer h2{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.especificacionesJuegoContainer li{
+    font-size: 12px;
+    font-weight: 400;
+    color: #c9c9c9;
 }
 
 .icon {
@@ -166,14 +212,9 @@ body {
     margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
 
 p, ul {
-    font-size: 16px;
-    line-height: 1.5;
+    line-height: 22px;
 }
 
 ul {
@@ -183,13 +224,278 @@ ul {
 .comoJugarTitulo{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .comoJugarTitulo img {
     width: 47px;
-    height: 47px;
+    height: 42px;
     cursor: pointer;
     margin-right: 15px;
-    filter: invert(100%);
+}
+
+.link{
+    color: #26BBFF;
+    text-decoration: underline;
+}
+
+#txtVerMas {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    color: #26BBFF;
+    text-decoration: underline;
+    margin-right: 30px;
+}
+
+.textoConVerMas {
+    position: relative;
+    margin-top: 20px;
+}
+
+.textoConVerMas p{
+    font-size: 14px;
+    font-style: normal;
+}
+
+.especificacionesJuegoContainer ul li span {
+    font-weight: bold;
+    color: white;
+}
+
+#tituloJuegoEspecificaciones{
+    margin-bottom: 25px;
+}
+
+.contenidoRelacionadoContainer{
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    height: 295px;
+    margin-bottom: 50px;
+}
+
+.contenidoVisualContainer {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 67%;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.videoRelacionadoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    width: 27%;
+    margin-top: 50px;
+}
+
+.videoRelacionadoContainer h4{
+    font-size: 11px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal
+}
+
+.videoRelacionado {
+    width: 205px;
+    height: 129px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #000;
+}
+
+.imagenesRelacionadasContainer {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    margin-left: 40px;
+}
+
+.tituloImagenes {
+    font-size: 19px;
+    text-align: start;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imagenesGrid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.imagenesGrid img {
+    width: 132px;
+    height: 156px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.compartirEnRedesContainer {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redesSociales {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.redesSociales img {
+    width: 40px;
+    height: 40px;
+}
+
+.imagenesRelacionadasContainer img:last-child {
+    margin-right: 0;
+}
+
+.compartirEnRedesContainer h3 {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.compartirEnRedesContainer p {
+    color: #d1d0d0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.esrb-rating {
+    margin-top: 10px;
+    width: 35px;
+    height: 50px;
+}
+
+.imagenesRelacionadasContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+.comentariosContainer{
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 93%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.comentariosBoxContainer{
+    width: 60%;
+}
+
+.headerComentarios {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.headerComentarios h1 {
+    font-size: 25px;
+}
+
+.iconComentario {
+    width: 68px;
+    height: 57;
+    margin-right: 10px;
+}
+
+.verMasComentarios {
+    color: #007BFF;
+    font-size: 19px;
+
+}
+
+.boxComentarios .login-warning {
+    color: #888;
+    font-size: 12px;
+    text-align: right;
+}
+
+.comentario{
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.infoUsuario{
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.contenidoComentario {
+    margin-left: 10px;
+    text-align: start;
+    width: 100%;
+    
+}
+
+.contenidoComentario p {
+    margin-bottom: 23px;
+    font-size: 14px;
+}
+
+.contenidoComentario textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 23px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 1; /* Control de la altura de la línea */
+    padding: 15px 15px 0px 15px;
+}
+
+.contenidoComentario .date {
+    font-size: 12px;
+    color: #888;
+    text-align: start;
+}
+
+.verMasComentariosContainer{
+    display: flex;
+    justify-content: end;
 }
