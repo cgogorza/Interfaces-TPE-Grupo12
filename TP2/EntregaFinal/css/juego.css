@@ -395,6 +395,10 @@ ul {
     padding-bottom: 20px;
 }
 
+.contenedor p, .contenedor ul{
+    line-height: normal;
+}
+
 
 .comentariosContainer{
     background-color: white;
