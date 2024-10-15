@@ -108,5 +108,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function AbrirJuego4EnLinea() {
     // Aquí redireccionamos al otro HTML
-    window.location.href = '/juego.html';
+    document.location.href = "juego.html";
 }
