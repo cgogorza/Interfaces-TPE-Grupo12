@@ -37,20 +37,20 @@
 
 /* Definición de la animación hacia la derecha */
 @keyframes slideRight {
-    from {
-        transform: translateX(100%);
+    0% {
+        transform: translateX(10%);
     }
-    to {
+    100% {
         transform: translateX(0);
     }
 }
 
 /* Definición de la animación hacia la izquierda */
 @keyframes slideLeft {
-    from {
-        transform: translateX(-100%);
+    0% {
+        transform: translateX(-10%);
     }
-    to {
+    100% {
         transform: translateX(0);
     }
 }
@@ -60,6 +60,7 @@
     cursor: pointer;
     transition: 0.5s;
 }
+
 
 .desplazarDer img{
     height: 60%;
