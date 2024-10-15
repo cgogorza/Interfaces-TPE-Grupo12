@@ -9,10 +9,10 @@ hamburgerMenu.addEventListener('click', function() {
 
 function cerrarSesion() {
     // Aquí redireccionamos al otro HTML
-    window.location.href = "index.html";
+    document.location.href = "index.html";
 }
 
 function irHome(){
     // Aquí redireccionamos al Home
-    window.location.href = "home.html";
+    document.location.href = "home.html";
 }
