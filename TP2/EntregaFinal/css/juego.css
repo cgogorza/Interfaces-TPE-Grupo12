@@ -432,6 +432,11 @@ textarea::placeholder {
     opacity: 1;
 }
 
+input::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
 .iconComentario {
     width: 68px;
     height: 57;
