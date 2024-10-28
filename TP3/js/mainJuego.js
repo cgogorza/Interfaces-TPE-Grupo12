@@ -123,13 +123,13 @@ function addCircle(color) {
     if (color === 'blue') {
         posX = 98;
         posY = 290;
-        image.src = ("../fichas/" + jugadores[0].getNombre() +".png");
+        image.src = ("fichas/" + jugadores[0].getNombre() +".png");
         let circle = new Ficha(posX, posY, color, circleRadius, ctx, image);
         fichasA.push(circle);
     } else if (color === 'red') {
         posX = 1100;
         posY = 290;
-        image.src = ("../fichas/" + jugadores[1].getNombre() + ".png");
+        image.src = ("fichas/" + jugadores[1].getNombre() + ".png");
         let circle = new Ficha(posX, posY, color, circleRadius, ctx, image);
         fichasB.push(circle);
 
