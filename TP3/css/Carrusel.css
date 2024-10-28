@@ -1,0 +1,242 @@
+
+.contenedor{
+    width: 99.8%;
+    height: 471px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel{
+    display: flex;
+    align-items: center;
+    overflow-x: hidden; /* Permite el scroll horizontal */
+    scroll-snap-type: x mandatory; /* Alineación suave de las cards */
+    width: 100%;
+    height: 405px;
+    white-space: nowrap; /* Evita que las cards se muevan hacia abajo */
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none; /* Oculta el scroll en Chrome, Safari y Edge */
+}
+
+.conteinerCarrusel{
+    height: 450px;
+    width: 83%;
+}
+
+/* Clases para animar hacia la izquierda o derecha */
+.mover-derecha {
+    animation: slideRight 0.5s forwards;
+}
+
+.mover-izquierda {
+    animation: slideLeft 0.5s forwards;
+}
+
+/* Definición de la animación hacia la derecha */
+@keyframes slideRight {
+    0% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Definición de la animación hacia la izquierda */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.desplazarIzq:hover,.desplazarDer:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.desplazarDer img{
+    height: 60%;
+    width: 60%;
+    padding: 30%;
+    
+}
+
+.desplazarIzq img{
+    height: 60%;
+    width: 60%;
+}
+
+.tituloCategoria{
+    padding-left: 1.9%;
+    margin: 0%;
+    color: white;
+}
+
+.cardJuego{
+    flex: 0 0 auto;
+    width: 190px;
+    height: 365px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    border-radius: 15px;
+    background-color: #202020;
+    overflow: hidden; /* Si la tarjeta tiene contenido desbordado, también se ocultará */
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Animación de deslizamiento suave */
+}
+
+@media (max-width: 768px) {
+    .cardJuego {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+.cardJuego:hover {
+    transform: scale(1.1) rotate(3deg);; /* Agranda la card al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Agrega un sombreado para más efecto */
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Suaviza la animación */
+}
+
+.cardJuego img{
+    border-radius: 15px;
+    height: 248px;
+    width: 100%;
+    object-fit: cover; /* Asegura que la imagen mantenga proporción */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+.cardJuego p {
+    color: #C6C6C1;
+    padding-left: 5px;
+    margin-bottom: 3%;
+}
+
+.tamanioParrafoJuegoBase{
+    margin-top: 7px;
+    font-size: 0.7rem;
+}
+
+.cardJuego h3 {
+    color: white;
+    padding-left: 5px;
+    padding-top: 0%;
+    margin: 7%;
+    margin-left: 1%;
+}
+
+.buttom{
+    width: 100px;
+    height: 35px;
+    background-color: #007AFF;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 40%;
+}
+
+.buttom:hover {
+    background-color: #0062CB;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buttom p{
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 4%;
+}
+
+.heart-icon {
+    padding-left: 45%;
+    top: 5px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde la derecha */
+    color: white; /* Cambia el color del ícono a blanco */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+    z-index: 1; /* Asegura que el ícono esté por encima de la imagen */
+}
+
+.heart-icon i {
+    font-size: 1.5rem; /* Ajusta el tamaño del ícono */
+    transition: color 0.3s; /* Agrega una transición suave al color */
+}
+
+.heart-icon i:hover {
+    color: red; /* Cambia el color del ícono al pasar el mouse */
+}
+
+.alineacionParrafoYicono{
+    display: flex;
+}
+.contenedorPrecioCarrito {
+    display: flex;
+    justify-content: space-between; /* Asegura que el precio y el carrito estén en los extremos */
+    align-items: center; /* Alinea verticalmente el contenido */
+    padding: 5px; /* Agrega un poco de espacio alrededor */
+}
+
+.precio {
+    color: white;
+    margin: 0; /* Elimina el margen para que se alinee mejor */
+    padding-left: 5px; /* Espaciado a la izquierda */
+}
+
+.carritoYiconoComprado{
+    height: 25px;
+    width: 25px;
+}
+
+.accionIcono {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    display: flex; /* Cambia a flex para alinear correctamente los iconos */
+    align-items: center; /* Alinea verticalmente el icono */
+}
+
+.iconoComprado {
+    display: none; /* Oculto inicialmente */
+}
+
+.closeIcono {
+    display: none; /* Oculto inicialmente */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.car img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border-radius: 0; /* Asegúrate de que no tenga bordes redondeados */
+}
+.iconoComprado img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+
+.closeIcono svg {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Mostrar la cruz al hacer hover sobre el contenedor solo si el like verde está visible */
+.iconoComprado:hover ~ .closeIcono,
+.iconoComprado:active ~ .closeIcono {
+    display: block;
+}
+
+.closeIcono:hover {
+    transform: scale(1.1); /* Efecto de aumento al hacer hover sobre la cruz */
+}

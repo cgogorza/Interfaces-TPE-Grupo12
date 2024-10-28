@@ -1,0 +1,197 @@
+/* Estilos generales */
+body {
+    background-color: #101014;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+}
+
+label {
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+    display: block;  
+    width: 90%;      
+    margin-left: 5%; 
+    margin-top: 5px ; 
+}
+
+.captcha img{
+    height: 45px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    height: 70px;
+    width: auto;
+}
+
+.ini, .cerrar{
+    background-color: #5a5a5a;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#id_del_popover{
+    /*aca*/
+    background-color: #0056b3;
+}
+
+.ini:hover {
+    background-color: #4d4d4d;
+}
+
+
+form {
+    background-color: #202020;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    margin: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+label {
+    color: #fff;
+    font-size: 14px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="number"]::placeholder {
+    color: #aaa;
+}
+
+.registrarse input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.registrarse a:hover {
+    background-color: #0056b3;
+}
+
+.registrarse{
+    display: flex;
+    justify-content: center;
+}
+
+.captcha {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-login {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.continuar{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    align-items: center;
+}
+
+.palito{
+    display: flex;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.footer {
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.form-inicio{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}   
+
+.social-login p, 
+.footer p {
+    color: #fff;
+}
+
+#id_del_popover::backdrop{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#id_del_popover{
+    padding: 10px;
+    border: none;
+    position:fixed; 
+    background-color: #fff; 
+    color: #333; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    padding: 15px; 
+    width: 250px; 
+}
+

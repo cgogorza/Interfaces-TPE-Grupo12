@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+</head>
+    <body>
+        <form id="form">
+            <div class="logo">
+                <img src="images/register/Logo-web-definido-circular.png" alt="">
+            </div>
+            <h2>Registrarse</h2>
+    
+            <div class="inputs">
+                <!-- Nombre y Apellido -->
+                <label for="name">Nombre y Apellido</label>
+                <input type="text" id="name" name="name" placeholder="Nombre y Apellido">
+        
+                <!-- Nickname (Opcional) -->
+                <label for="nickname">Nickname (Opcional)</label>
+                <input type="text" id="nickname" name="nickname" placeholder="Nickname (Opcional)">
+        
+                <!-- Edad -->
+                <label for="age">Edad</label>
+                <input type="number" id="age" name="age" placeholder="Edad" >
+        
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" >
+        
+                <!-- Contraseña -->
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña" >
+        
+                <!-- Repetir Contraseña -->
+                <label for="confirm-password">Repetir contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Repetir contraseña" >
+            </div>
+
+            <!-- reCAPTCHA -->
+            <div class="captcha">
+                <img src="images/register/ReCaptcha.png" alt="">
+            </div>
+    
+            <!-- Botón de registro -->
+            <div class="registrarse">
+                <input type="submit" value="Registrarse">
+            </div>
+            
+            <!-- -------------- -->
+            <!-- POPOVER -->
+
+            <div>
+                
+                    <div id="id_del_popover" popover="manual">
+                        <p>Su registro fue realizado exitosamente</p>
+                        <div class="button_container">
+                            <a class="cerrar" href="index.html">Cerrar</a>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- -------------- -->
+
+            
+            <!-- Opciones de redes sociales -->
+            <div class="social-login">
+                <div class="continuar">
+                    <div class="palito">
+                        <img src="images/register/Group 43.png" alt="">
+                    </div>
+                    <p>o continua con</p>
+                    <div class="palito">
+                        <img src="images/register/Group 43.png" alt="">
+                    </div>
+                </div>
+                <div class="redes">
+                    <div>
+                        <img src="images/register/Logo-Facebook.png" alt="">
+                    </div>
+                    <div>
+                        <img src="images/register/Captura de pantalla 2024-09-11 103719 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Pie de página -->
+            <div class="footer">
+                <p>¿Ya tienes una cuenta? 
+                <div class="ini">
+                    <a href="index.html" class="link">Iniciar Sesión</a>
+                </div>
+            </p>
+            </div>
+        </form>
+
+    <script src="js/register.js"></script>
+    </body>
+</html>
