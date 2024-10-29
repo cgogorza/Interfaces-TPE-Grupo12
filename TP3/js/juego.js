@@ -33,10 +33,12 @@ class Juego {
             const modalJuego = document.getElementById("winnerModal");
             const winnerMessage = document.getElementById("winnerMessage");
             const closeModalBtn = document.getElementById("closeModalBtn");
-
-            winnerMessage.textContent = `¡Ganador ${n}!`;
-            modalJuego.classList.remove("oculto");  // Muestra el modal
-
+            setTimeout(() => {
+                winnerMessage.textContent = ¡Ganador ${n}!;
+                modalJuego.classList.remove("oculto"); 
+                // Muestra el modal
+             }, 2000);
+             
             // Evento para cerrar el modal y recargar la página
             closeModalBtn.addEventListener("click", () => {
                 window.location.reload();  // Recarga la página
