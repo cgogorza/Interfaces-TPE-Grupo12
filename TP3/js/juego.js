@@ -29,7 +29,18 @@ class Juego {
         let cellsConnect = this.tablero.cellsConnect(this.connect);
         if(cellsConnect.length > 0){
             let n = this.jugadores[this.lastPlayedTurn()].getNombre()
-            setTimeout(function() { alert("Ganador! " + n); window.location.reload(); }, 2000);
+            // Mostrar el modal y establecer el mensaje del ganador
+            const modalJuego = document.getElementById("winnerModal");
+            const winnerMessage = document.getElementById("winnerMessage");
+            const closeModalBtn = document.getElementById("closeModalBtn");
+
+            winnerMessage.textContent = `¡Ganador ${n}!`;
+            modalJuego.classList.remove("oculto");  // Muestra el modal
+
+            // Evento para cerrar el modal y recargar la página
+            closeModalBtn.addEventListener("click", () => {
+                window.location.reload();  // Recarga la página
+            });
         }
     }
 

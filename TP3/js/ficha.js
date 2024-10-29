@@ -18,21 +18,33 @@ class Ficha {
     }
 
     draw() {
-        // Dibuja la imagen en el centro de la ficha
-        this.ctx.fillStyle = this.fill;
-        this.ctx.beginPath()
-        this.ctx.arc(this.posX, this.posY, this.radius, 0, 2 * Math.PI);
-        this.ctx.fill()
-        this.ctx.closePath();
-        if(this.image){
-            const imageX = this.posX - this.radius * 1.2; 
-            // Calcula la posición X de la imagen
-            const imageY = this.posY - this.radius * 1.2; 
-            // Calcula la posición Y de la imagen
-            this.ctx.drawImage(this.image, imageX, imageY, 50, 70); 
-            //Lo dibuja
+        const scaleFactor = 1.4;  // Ajusta el tamaño con este factor
+
+        if (this.image) {
+            this.image.onload = () => {
+                const aspectRatio = this.image.width / this.image.height;
+                const imageHeight = this.radius * 2 * scaleFactor;
+                const imageWidth = imageHeight * aspectRatio; 
+    
+                const imageX = this.posX - imageWidth / 2;
+                const imageY = this.posY - imageHeight / 2;
+    
+                this.ctx.drawImage(this.image, imageX, imageY, imageWidth, imageHeight);
+            };
+    
+            if (this.image.complete) {
+                const aspectRatio = this.image.width / this.image.height;
+                const imageHeight = this.radius * 2 * scaleFactor;  
+                const imageWidth = imageHeight * aspectRatio;
+    
+                const imageX = this.posX - imageWidth / 2;
+                const imageY = this.posY - imageHeight / 2;
+    
+                this.ctx.drawImage(this.image, imageX, imageY, imageWidth, imageHeight);
             }
+        }
     }
+    
 
     posOriginal(){
         //Busca la posición original para mandar coordenadas
