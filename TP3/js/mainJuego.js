@@ -69,6 +69,8 @@ formulario.addEventListener('submit', function (event) {
     jugador1.setNombre(name1);
     jugador2.setNombre(name2);
     e.classList.toggle("invisible");
+    turn.classList.toggle("invisible");
+    tiempo.classList.toggle("invisible");
     btr.classList.add("boton-de-reinicio");
     //Si se aprieta el botón de reinicio, se recarga la página
     btr.addEventListener("click", () => {
