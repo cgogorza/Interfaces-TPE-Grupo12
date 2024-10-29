@@ -25,7 +25,7 @@ class Juego {
     }
 
     //Verifica el ganador, ejecuta una alerta que al clickearla reinicia la página
-    winGame(){
+    setTiemout(winGame(){
         let cellsConnect = this.tablero.cellsConnect(this.connect);
         if(cellsConnect.length > 0){
             let n = this.jugadores[this.lastPlayedTurn()].getNombre()
@@ -42,7 +42,7 @@ class Juego {
                 window.location.reload();  // Recarga la página
             });
         }
-    }
+    }, 2000);
 
     //Cambia el turno del jugador
     switchTurn() {
