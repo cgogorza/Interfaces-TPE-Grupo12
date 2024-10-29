@@ -34,7 +34,7 @@ class Juego {
             const winnerMessage = document.getElementById("winnerMessage");
             const closeModalBtn = document.getElementById("closeModalBtn");
             setTimeout(() => {
-                winnerMessage.textContent = ¡Ganador ${n}!;
+                winnerMessage.textContent = `¡Ganador ${n}!`;
                 modalJuego.classList.remove("oculto"); 
                 // Muestra el modal
              }, 2000);
