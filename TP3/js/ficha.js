@@ -18,7 +18,7 @@ class Ficha {
     }
 
     draw() {
-        const scaleFactor = 1.4;  // Ajusta el tamaño con este factor
+        const scaleFactor = 1;  // Ajusta el tamaño con este factor
 
         if (this.image) {
             this.image.onload = () => {

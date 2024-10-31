@@ -12,7 +12,6 @@ class Tablero {
         }
     }
 
-
     //Dibuja el tablero
     draw(ctx, column) {
         for (let row = 0; row < this.rows; row++) {
@@ -20,34 +19,34 @@ class Tablero {
                 const x = this.startX + col * this.cellSize;
                 const y = this.startY + row * this.cellSize;
 
-                //Va dibujando las columnas dependiendo las posiciones, y les asigna un color
+                // Va dibujando las columnas dependiendo las posiciones, y les asigna un color
                 if (col % 2 === 0) {
-                    if (row % 2 === 0) {
-                        ctx.fillStyle = '#26BBFF';
-                        ctx.fillRect(x, y, this.cellSize, this.cellSize);
-                    } else {
-                        ctx.fillStyle = '#0062CB';
-                        ctx.fillRect(x, y, this.cellSize, this.cellSize);
-                    }
-                    
-                }else{
-                    //Lo mismo para las filas
-                    if (row % 2 === 0) {
-                        ctx.fillStyle = '#0062CB';
-                        ctx.fillRect(x, y, this.cellSize, this.cellSize);
-                    } else {
-                        ctx.fillStyle = '#26BBFF';
-                        ctx.fillRect(x, y, this.cellSize, this.cellSize);
-                    }
+                    ctx.fillStyle = row % 2 === 0 ? '#26BBFF' : '#0062CB';
+                } else {
+                    ctx.fillStyle = row % 2 === 0 ? '#0062CB' : '#26BBFF';
                 }
+                ctx.fillRect(x, y, this.cellSize, this.cellSize);
+
+                // Dibujar el círculo blanco con borde negro centrado en el cuadrado
+                ctx.beginPath();
+                ctx.arc(
+                    x + this.cellSize / 2,   // Posición X del centro del círculo
+                    y + this.cellSize / 2,   // Posición Y del centro del círculo
+                    this.cellSize / 3,       // Radio del círculo
+                    0,                       // Ángulo inicial
+                    2 * Math.PI              // Ángulo final
+                );
+                ctx.fillStyle = 'white';
+                ctx.fill();                 // Rellenar el círculo de blanco
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 1;
+                ctx.stroke();               // Dibujar el borde negro
             }
         }
 
-        //Les pone un lineado negro
+        // Les pone un lineado negro alrededor del tablero
         ctx.strokeStyle = 'black';
         ctx.lineWidth = 1;
-
-        //Empieza a dibujar el contenido, metiendolo en el canvas
         for (let row = 0; row <= this.rows; row++) {
             ctx.beginPath();
             ctx.moveTo(this.startX, this.startY + row * this.cellSize);
@@ -57,7 +56,7 @@ class Tablero {
 
         for (let col = 0; col <= this.cols; col++) {
             if (column != null && (col === column || col === column + 1)) {
-                ctx.strokeStyle = '#F8FFB5';
+                ctx.strokeStyle = '#F8FFB5';// Ilumina la columna
                 ctx.lineWidth = 3;
             } else {
                 ctx.strokeStyle = 'black';
@@ -67,10 +66,9 @@ class Tablero {
             ctx.moveTo(this.startX + col * this.cellSize, this.startY);
             ctx.lineTo(this.startX + col * this.cellSize, this.startY + this.rows * this.cellSize);
             ctx.stroke();
-
         }
-
     }
+
 
     //Hace la conexión de fichas en el tablero, verificando cómo se va ganando
     cellsConnect(connect) {
@@ -214,12 +212,16 @@ class Tablero {
         }
     }
 
-    //Se fijate la distancia de lanzamiento de la ficha, y si es posible hacerlo
+    //Se fija la distancia de lanzamiento de la ficha, y si es posible hacerlo
     isDropeable(circulo, col) {
+
         const circuloX = circulo.getPosX();
         const circuloY = circulo.getPosY();
+
+        //FIja la pos X desde donde puede caer la ficha
         const cellX = this.startX + col * this.cellSize + this.cellSize / 2;
-        const cellY = this.startY + 0 * this.cellSize + this.cellSize / 2;
+        //Fija desde donde puede caer la ficha
+        const cellY = this.startY;
 
         const distance = Math.sqrt((circuloX - cellX) ** 2 + (circuloY - cellY) ** 2);
         
@@ -296,8 +298,6 @@ class Tablero {
         return this.startY;
     }
     setStartY(value) {
-        this.startY = value;
-    }
+        this.startY = value;
+    }
 }
-
-

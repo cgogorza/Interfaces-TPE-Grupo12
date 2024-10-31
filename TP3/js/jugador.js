@@ -21,49 +21,45 @@ class Jugador{
         return false;
     }
 
-    //Lanza la ficha y cambia el turno
-    dropFicha(col, ficha, board,game){
-        let cord = board.fillCol(col,ficha);
-        ficha.moveTo(cord);
-        game.switchTurn();
+    // Lanza la ficha con una animación de caída
+    dropFicha(col, ficha, board, game) {
+        // Determina la posición final en la columna y mueve la ficha hacia abajo
+        let cord = board.fillCol(col, ficha);
+
+        // Inicia la posición de la ficha desde arriba del tablero
+        ficha.setPositionAnimacion(cord.x, 0); // Empieza desde la parte superior (y=0)
+
+        // Mueve la ficha hacia abajo gradualmente hasta alcanzar su posición final
+        this.animateFall(cord, ficha, game);
     }
 
-    //Mueve la ficha gradualmente
-    moveDisc(cord, ficha) {
-        console.log(this.fichas)
-        if (this.fichasContains(ficha)) {
+    // Animación de caída
+    animateFall(cord, ficha, game) {
+        const targetY = cord.y;
 
-            const targetX = cord.x;
-            const targetY = cord.y;
+        const animate = () => {
+            update(); // Actualiza el tablero (asegúrate de tener esta función implementada)
 
-            // Calcula las diferencias en las coordenadas X e Y
-            const dx = (targetX - ficha.getPosX()) / 60;
-            const dy = (targetY - ficha.getPosY()) / 60;
-
-            const animate = () => {
-                update();
-                ficha.ctx.beginPath()
-                // Verifica si el círculo ha llegado a la posición objetivo
-                if (Math.abs(ficha.getPosX() - targetX) < Math.abs(dx) || Math.abs(ficha.getPosY() - targetY) < Math.abs(dy)) {
-                    ficha.setPositionAnimacion(targetX, targetY);
-                    ficha.draw();
-                    return;
-                }
-
-                // Mueve el círculo gradualmente
-                ficha.setPositionAnimacion(ficha.getPosX() + dx, ficha.getPosY() + dy);
+            // Si la ficha ha llegado a la posición final, termina la animación
+            if (ficha.getPosY() >= targetY) {
+                ficha.setPositionAnimacion(cord.x, targetY);
                 ficha.draw();
+                game.switchTurn(); // Cambia el turno al final de la animación
+                return;
+            }
 
-                requestAnimationFrame(animate);
-                ficha.ctx.closePath();
-            };
-            animate();
-            ficha.movido = true;
-        }
+            // Mueve la ficha hacia abajo
+            ficha.setPositionAnimacion(ficha.getPosX(), ficha.getPosY() + 5); // Ajusta la velocidad aumentando el valor (5)
+            ficha.draw();
 
+            // Llama a requestAnimationFrame para continuar la animación
+            requestAnimationFrame(animate);
+        };
 
+        // Inicia la animación
+        animate();
     }
-
+    
     getNombre(){
         return this.nombre;
     }

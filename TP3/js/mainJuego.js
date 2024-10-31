@@ -23,8 +23,8 @@ let CANT_FIG = tablero.getSize();
 tablero.draw(ctx);
 
 //Crear los jugadores, y les asigna un array específico de fichas, y un nombre que luego se redefine
-let jugador1 = new Jugador("azul", fichasA);
-let jugador2 = new Jugador("rojo", fichasB);
+let jugador1 = new Jugador("blue", fichasA);
+let jugador2 = new Jugador("red", fichasB);
 jugadores.push(jugador1, jugador2);
 
 //Crea el objeto juego
@@ -112,34 +112,49 @@ function update(c) {
     }
 }
 
-function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
 function addCircle(color) {
-    //Añade la ficha a un arraylist y lo pushea a los arreglos de fichas a y b 
-    //para dibujarlos en el canvas
+    // Define el radio de la ficha y las posiciones iniciales
     let circleRadius = 20;
-    let posX, posY;
     const image = new Image();
+    let posX, posY;
+
+    // Configuración de la altura máxima disponible y el número máximo de fichas permitidas
+    const maxWaitHeight = 400; // Altura máxima de la columna de espera (ajusta según tu tablero)
+    const maxFichas = parseInt(tipoJuego.value) * parseInt(tipoJuego.value); // Ajuste del número máximo de fichas visibles en espera
+
+    // Calcula el espaciado inicial de manera uniforme para el número máximo de fichas
+    let dynamicSpacing = Math.max(circleRadius / maxFichas, maxWaitHeight / maxFichas);
+
+
+    // Determina la posición X y Y inicial de la ficha, sin recalcular el espaciado dinámico
     if (color === 'blue') {
-        posX = 98;
-        posY = 290;
-        image.src = ("fichas/" + jugadores[0].getNombre() +".png");
+        posX = 98; // Posición en X de la columna de espera para el jugador azul
+        posY = 21 + fichasA.length * dynamicSpacing; // Aplica el espaciado inicial uniforme
+
+        // Carga la imagen de la ficha
+        image.src = "fichas/" + jugadores[0].getNombre() + ".png";
+
+        // Crea la ficha original y la agrega al array de fichas del jugador azul
         let circle = new Ficha(posX, posY, color, circleRadius, ctx, image);
         fichasA.push(circle);
+        figures.push(circle);
+
     } else if (color === 'red') {
-        posX = 1100;
-        posY = 290;
-        image.src = ("fichas/" + jugadores[1].getNombre() + ".png");
+        posX = 1100; // Posición en X de la columna de espera para el jugador rojo
+        posY = 21 + fichasB.length * dynamicSpacing;
+
+        image.src = "fichas/" + jugadores[1].getNombre() + ".png";
+
+        // Crea la ficha original y la agrega al array de fichas del jugador rojo
         let circle = new Ficha(posX, posY, color, circleRadius, ctx, image);
         fichasB.push(circle);
-
+        figures.push(circle);
     }
-
-    let circle = new Ficha(posX, posY, color, circleRadius, ctx, image);
-    figures.push(circle);
 }
+
+
+
+
 function actualizarTemporizador() {
     if(!terminado){
         if (tiempoRestante <= 0) {
@@ -220,14 +235,6 @@ function onMouseMove(e) {
 function clearCanvas() {
     //Borra el objeto anterior para dar paso al que se mueve, lo borra y dibuja continuamente
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-}
-
-function randomRGBA() {
-    let r = Math.round(Math.random() * 255);
-    let g = Math.round(Math.random() * 255);
-    let b = Math.round(Math.random() * 255);
-    let a = 255;
-    return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
 function addFigures() {

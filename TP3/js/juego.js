@@ -28,7 +28,7 @@ class Juego {
     winGame(){
         let cellsConnect = this.tablero.cellsConnect(this.connect);
         if(cellsConnect.length > 0){
-            let n = this.jugadores[this.lastPlayedTurn()].getNombre()
+            let n = this.jugadores[this.getCurrentTurn()].getNombre()
             // Mostrar el modal y establecer el mensaje del ganador
             const modalJuego = document.getElementById("winnerModal");
             const winnerMessage = document.getElementById("winnerMessage");
@@ -59,5 +59,9 @@ class Juego {
     //Obtiene el jugador actual
     getCurrentPlayer() {
         return this.jugadores[this.currentTurn];
+    }
+
+    getCurrentTurn(){
+        return this.currentTurn;
     }
 }
