@@ -172,15 +172,17 @@
             </div>
             <div class="botones">
                 <form id="selector">
-                    <select id="jugador-1">
-                        <option value="Son Goku">Son Goku</option>
-                        <option value="Vegeta">Vegeta</option>
-                        <option value="Majin Boo">Majin Boo</option>
+                    <img id="img-jugador-1" src="fichas/Son Goku.png" alt="Jugador 1" width="30" height="30">
+                    <select id="jugador-1" onchange="cambiarImagen('jugador-1', 'img-jugador-1')">
+                        <option value="Son Goku" data-img="fichas/Son Goku.png">Son Goku</option>
+                        <option value="Vegeta" data-img="fichas/Vegeta.png">Vegeta</option>
+                        <option value="Majin Boo" data-img="fichas/Majin Boo.png">Majin Boo</option>
                     </select>
-                    <select id="jugador-2">
-                        <option value="Sonic">Sonic</option>
-                        <option value="Amy">Amy</option>
-                        <option value="Tails">Tails</option>
+                    <img id="img-jugador-2" src="fichas/Sonic.png" alt="Jugador 2" width="30" height="30">
+                    <select id="jugador-2" onchange="cambiarImagen('jugador-2', 'img-jugador-2')">
+                        <option value="Sonic" data-img="fichas/Sonic.png">Sonic</option>
+                        <option value="Amy" data-img="fichas/Amy.png">Amy</option>
+                        <option value="Tails" data-img="fichas/Tails.png">Tails</option>
                     </select>
                     <select id="opciones">
                         <option value="4">4 en Linea</option>
@@ -602,6 +604,14 @@
         <div class="modal-content-juego">
             <h2 id="winnerMessage"></h2>
             <button id="closeModalBtn" class="modal-button-juego">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Modal de empate -->
+    <div id="empateModal" class="modal-container-juego oculto">
+        <div class="modal-content-juego">
+            <h2 id="empateMessage"></h2>
+            <button id="closeModalEmpateBtn" class="modal-button-juego">Aceptar</button>
         </div>
     </div>
 

@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 8000);  // 8 segundos
 });
 
+function cambiarImagen(jugadorId, imgId) {
+    const select = document.getElementById(jugadorId);
+    const selectedOption = select.options[select.selectedIndex];
+    const imgSrc = selectedOption.getAttribute("data-img");
+    document.getElementById(imgId).src = imgSrc;
+}
+
 class Juego {
     constructor(jugadores, tablero, fichas, connect) {
         this.connect = connect;
@@ -28,11 +35,14 @@ class Juego {
     winGame(){
         let cellsConnect = this.tablero.cellsConnect(this.connect);
         if(cellsConnect.length > 0){
+            terminado = true;
+
             let n = this.jugadores[this.getCurrentTurn()].getNombre()
             // Mostrar el modal y establecer el mensaje del ganador
             const modalJuego = document.getElementById("winnerModal");
             const winnerMessage = document.getElementById("winnerMessage");
             const closeModalBtn = document.getElementById("closeModalBtn");
+            
             setTimeout(() => {
                 winnerMessage.textContent = `¡Ganador ${n}!`;
                 modalJuego.classList.remove("oculto"); 

@@ -160,8 +160,16 @@ function actualizarTemporizador() {
         if (tiempoRestante <= 0) {
             // Si el tiempo se acaba, termina el juego
             terminado = true;
-            alert('Se acabó el tiempo');
-            window.location.reload();
+            // Mostrar el modal y establecer el mensaje de empate
+            const modalJuego = document.getElementById("empateModal");
+            const winnerMessage = document.getElementById("empateMessage");
+            const closeModalBtn = document.getElementById("closeModalEmpateBtn");
+            winnerMessage.textContent = `¡ Empate !`;
+            modalJuego.classList.remove("oculto");  // Muestra el modal
+            // Evento para cerrar el modal y recargar la página
+            closeModalBtn.addEventListener("click", () => {
+                window.location.reload();  // Recarga la página
+            });
         }
         const mensaje = `${tiempoRestante}`;
     }
@@ -174,15 +182,16 @@ function iniciarConteo() {
             clearInterval(intervalId);
         }else{
             tiempoRestante--;
+            //Lo muestra por pantalla
+            tiempo.textContent = 'Tiempo: ' + tiempoRestante;
+
             if (tiempoRestante <= 0) {
                 actualizarTemporizador();
                 clearInterval(intervalId); // Detiene el intervalo cuando llegues a 0 o menos
-                mostrarMensajeGanador('Se acabó el tiempo');
             }else{
                 actualizarTemporizador();
             }
-            //Lo muestra por pantalla
-            tiempo.textContent = 'Tiempo: ' + tiempoRestante;
+            
         }
     }, 1000);
 }

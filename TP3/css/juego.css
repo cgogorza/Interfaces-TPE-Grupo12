@@ -690,6 +690,17 @@ input::placeholder {
     background-color: #357ab8;
 }
 
+#selector{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#selector > * {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .modificacionesTurno {
     display: flex; /* Usar flexbox para centrar el contenido */
     justify-content: center; /* Centrar horizontalmente */
