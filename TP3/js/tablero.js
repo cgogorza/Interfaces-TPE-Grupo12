@@ -7,25 +7,49 @@ class Tablero {
         this.startY = startY;
         this.matrix = new Array(rows);
 
+        // Cargar las dos imágenes
+        this.img1 = new Image();
+        this.img1.src = './images/CuadradoAzul.jpg';
+        this.img2 = new Image();
+        this.img2.src = './images/CuadradoCeleste.jpg';
+
+        // Inicializar como no cargadas
+        this.img1Loaded = false;
+        this.img2Loaded = false;
+
+        // Establecer manejadores de carga de imágenes
+        this.img1.onload = () => {
+            this.img1Loaded = true;
+            this.checkImagesLoaded();
+        };
+        this.img2.onload = () => {
+            this.img2Loaded = true;
+            this.checkImagesLoaded();
+        };
+
         for (let row = 0; row < rows; row++) {
             this.matrix[row] = new Array(cols).fill(null);
         }
     }
 
+     // Dibuja el tablero solo si ambas imágenes están cargadas
+     checkImagesLoaded() {
+        if (this.img1Loaded && this.img2Loaded && this.ctx) {
+            this.draw(this.ctx);
+        }
+    }
+
     //Dibuja el tablero
     draw(ctx, column) {
+        this.ctx = ctx; // Guardar el contexto para poder usarlo en checkImagesLoaded()
         for (let row = 0; row < this.rows; row++) {
             for (let col = 0; col < this.cols; col++) {
                 const x = this.startX + col * this.cellSize;
                 const y = this.startY + row * this.cellSize;
 
-                // Va dibujando las columnas dependiendo las posiciones, y les asigna un color
-                if (col % 2 === 0) {
-                    ctx.fillStyle = row % 2 === 0 ? '#26BBFF' : '#0062CB';
-                } else {
-                    ctx.fillStyle = row % 2 === 0 ? '#0062CB' : '#26BBFF';
-                }
-                ctx.fillRect(x, y, this.cellSize, this.cellSize);
+                // Dibuja la imagen correspondiente
+                const img = (col % 2 === 0) ? (row % 2 === 0 ? this.img1 : this.img2) : (row % 2 === 0 ? this.img2 : this.img1);
+                ctx.drawImage(img, x, y, this.cellSize, this.cellSize);
 
                 // Dibujar el círculo blanco con borde negro centrado en el cuadrado
                 ctx.beginPath();
