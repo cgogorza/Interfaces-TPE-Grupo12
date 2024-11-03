@@ -50,7 +50,6 @@ class Ficha {
         //Busca la posición original para mandar coordenadas
         const cord = { x: this.posOriginalX, y: this.posOriginalY };
         this.returnTo(cord);
-
     }
 
     compareTo(c2){
@@ -74,6 +73,7 @@ class Ficha {
                 if (Math.abs(this.posX - targetX) < Math.abs(dx) || Math.abs(this.posY - targetY) < Math.abs(dy)) {
                     this.setPositionAnimacion(targetX, targetY);
                     this.draw();
+                    update();
                     return;
                 }
     

@@ -27,7 +27,7 @@ class Jugador{
         let cord = board.fillCol(col, ficha);
 
         // Inicia la posición de la ficha desde arriba del tablero
-        ficha.setPositionAnimacion(cord.x, 0); // Empieza desde la parte superior (y=0)
+        ficha.setPositionAnimacion(cord.x, 50); // Empieza desde la parte superior (y=50)
 
         // Mueve la ficha hacia abajo gradualmente hasta alcanzar su posición final
         this.animateFall(cord, ficha, game);
@@ -45,6 +45,7 @@ class Jugador{
                 ficha.setPositionAnimacion(cord.x, targetY);
                 ficha.draw();
                 game.switchTurn(); // Cambia el turno al final de la animación
+                update();
                 return;
             }
 

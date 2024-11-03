@@ -2,7 +2,6 @@ let canvas = document.querySelector('#canvas');
 let ctx = canvas.getContext('2d');
 
 let turn = document.getElementById('turn');
-let tiempo = document.getElementById('tiempo');
 const tipoJuego = document.getElementById('opciones');
 const play = document.getElementById('play');
 const formulario = document.getElementById('selector');
@@ -45,13 +44,30 @@ function crearJuego() {
     let cols = (parseInt(valor) * 2 )-1;
     let tableroWidth = cols * cellSize;
     let startX = (canvasWidth - tableroWidth) / 2;
-    let startY = 20;
+    let startY = 50;
     tablero = new Tablero(rows, cols, cellSize, startX, startY);
     juego = new Juego(jugadores, tablero, figures,parseInt(valor));
     addFigures();
     tablero.draw(ctx);
     CANT_FIG = tablero.getSize();
 }
+
+function dibujarTemporizador() {
+    // Definir el área específica del temporizador
+    let anchoTemporizador = 130; // Ancho deseado para el temporizador
+    let posX = (canvasWidth - anchoTemporizador) / 2; // Posición X centrada
+
+    // Limpiar solo el área del temporizador
+    ctx.clearRect(posX, 0, anchoTemporizador, 40); // Ajustar altura si es necesario
+
+    ctx.fillStyle = 'white';
+    ctx.font = '20px Arial';
+    ctx.textAlign = 'center'; // Alineación centrada para el temporizador
+
+    // Dibujar el tiempo restante en el canvas
+    ctx.fillText(`Tiempo: ${tiempoRestante}`, canvasWidth / 2, 30);
+}
+
 
 
 //Se manda al nuevo tablero lo que el usuario pase por parametro 
@@ -70,7 +86,6 @@ formulario.addEventListener('submit', function (event) {
     jugador2.setNombre(name2);
     e.classList.toggle("invisible");
     turn.classList.toggle("invisible");
-    tiempo.classList.toggle("invisible");
     btr.classList.add("boton-de-reinicio");
     //Si se aprieta el botón de reinicio, se recarga la página
     btr.addEventListener("click", () => {
@@ -101,15 +116,17 @@ function update(c) {
     clearCanvas();
     //Dibuja el tablero
     tablero.draw(ctx,c);
-    let jugador = juego.getCurrentPlayer();
-    turn.textContent = 'Es el turno de: ' + jugador.getNombre();
-    //Luego se encarga de dibujar el tablero y las fichas al mostrarlos en el canvas
-    ctx.fillRect(200, 600, 200, 20);
 
-    //
+    dibujarTemporizador();
+
+    // Dibujar las figuras
     for (let i = 0; i < figures.length; i++) {
         figures[i].draw();
     }
+
+    let jugador = juego.getCurrentPlayer();
+    turn.textContent = 'Es el turno de: ' + jugador.getNombre();
+    ctx.fillRect(200, 630, 200, 20);
 }
 
 function addCircle(color) {
@@ -129,7 +146,7 @@ function addCircle(color) {
     // Determina la posición X y Y inicial de la ficha, sin recalcular el espaciado dinámico
     if (color === 'blue') {
         posX = 98; // Posición en X de la columna de espera para el jugador azul
-        posY = 21 + fichasA.length * dynamicSpacing; // Aplica el espaciado inicial uniforme
+        posY = 51 + fichasA.length * dynamicSpacing; // Aplica el espaciado inicial uniforme
 
         // Carga la imagen de la ficha
         image.src = "fichas/" + jugadores[0].getNombre() + ".png";
@@ -141,7 +158,7 @@ function addCircle(color) {
 
     } else if (color === 'red') {
         posX = 1100; // Posición en X de la columna de espera para el jugador rojo
-        posY = 21 + fichasB.length * dynamicSpacing;
+        posY = 51 + fichasB.length * dynamicSpacing;
 
         image.src = "fichas/" + jugadores[1].getNombre() + ".png";
 
@@ -171,7 +188,7 @@ function actualizarTemporizador() {
                 window.location.reload();  // Recarga la página
             });
         }
-        const mensaje = `${tiempoRestante}`;
+        dibujarTemporizador();
     }
 }
 
@@ -182,8 +199,6 @@ function iniciarConteo() {
             clearInterval(intervalId);
         }else{
             tiempoRestante--;
-            //Lo muestra por pantalla
-            tiempo.textContent = 'Tiempo: ' + tiempoRestante;
 
             if (tiempoRestante <= 0) {
                 actualizarTemporizador();

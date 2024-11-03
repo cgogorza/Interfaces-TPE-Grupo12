@@ -47,7 +47,7 @@ class Juego {
                 winnerMessage.textContent = `¡Ganador ${n}!`;
                 modalJuego.classList.remove("oculto"); 
                 // Muestra el modal
-             }, 2000);
+             }, 800);
              
             // Evento para cerrar el modal y recargar la página
             closeModalBtn.addEventListener("click", () => {
