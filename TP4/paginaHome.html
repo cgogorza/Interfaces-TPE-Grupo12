@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+
+    <header class="header">
+        <div class="btn-ham" onclick="toggleMenu()">
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+</div>
+        <div class="logo">
+            <img src="images/logo 1.svg" alt="" class="oculto" id="logoHead">
+        </div>
+        <div class="btn-comprar">
+            <span>
+                <button class="comprar">COMPRAR</button>
+            </span>
+        </div>
+    </header>
+    <!-- Chequear btn-comprar no están-->
+
+    <!-- Menú desplegable-->
+    <div class="menu">
+        <div class="menu-usuario" id="menu-ham">
+            <div class="cont1 menu-oculto">
+                <span>
+                    <h2>menu 1</h2>
+                </span>
+            </div>
+            <div class="cont2 menu-oculto">
+                <span>
+                    <h2>menu 2</h2>
+                </span>
+            </div>
+            <div class="cont3 menu-oculto">
+                <span>
+                    <h2>menu 3</h2>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Acá cierra Menú desplegable-->
+
+    <div class="container">
+        <!-- Contenedor del loader -->
+
+
+        <div class="keyart" id="parallax">
+            <div class="keyart_layer parallax" id="keyart-0" data-speed="1"></div> <!--fondo -->
+            <div class="keyart_layer parallax" id="keyart-1" data-speed="150"></div> <!--abursto 2--> 
+            <div class="keyart_layer parallax" id="keyart-2" data-speed="174"></div> <!--arbol 3 -->
+            <div class="keyart_layer parallax" id="keyart-3" data-speed="160"></div>  <!--arbusto 3-->
+            <div class="keyart_layer parallax" id="keyart-4" data-speed="174"></div> <!--arbol 2 -->
+            <div class="keyart_layer parallax" id="keyart-5" data-speed="80"></div> <!--naranja -->
+            <div class="keyart_layer parallax" id="keyart-6" data-speed="82"></div> <!--amarillo -->
+            <div class="keyart_layer parallax" id="keyart-7" data-speed="96"></div> <!--logo -->
+            <div class="keyart_layer parallax" id="keyart-8" data-speed="110"></div> <!--rojito -->
+            <div class="keyart_layer parallax" id="keyart-9" data-speed="180"></div> <!--piedra del montón 1-->
+            <div class="keyart_layer parallax" id="keyart-10" data-speed="180"></div> <!--piedra del montón 3-->
+            <div class="keyart_layer parallax" id="keyart-11" data-speed="180"></div> <!--piedra del montón 2 -->
+            <div class="keyart_layer parallax" id="keyart-12" data-speed="150"></div> <!--arbusto escondido de la izquierda-->
+            <div class="keyart_layer parallax" id="keyart-13" data-speed="165"></div> <!--arbol 1-->
+            <div class="keyart_layer parallax" id="keyart-14" data-speed="135"></div> <!--piedra solitaria-->
+            <div class="keyart_layer parallax" id="keyart-15" data-speed="130"></div> <!--arbusto 1-->
+        </div>
+        
+
+        <div class="seccion-divertida">
+            <div class="keyart_layer parallax" id="contenedor-h1" data-speed="2">
+                <h1>La app más divertida y educativa para niños de 3 años</h1>
+            </div>
+            
+            <div class="keyart_layer parallax" id="contenedor-p" data-speed="2">
+                <p>
+                    Numberblocks World es una divertida aplicación de vídeo a la carta 
+                    y juegos por suscripción dirigida a niños a partir de 3 años, 
+                    con un grupo de edad principal de 4 a 6 años, creada por el equipo 
+                    de Alphablocks Ltd. y Blue Zoo Animations Studio, ganador de un premio BAFTA.
+                </p>
+            </div>
+            <div class="keyart_layer parallax" id="tablet" data-speed="5"></div>
+            <div class="wave"></div>                
+            <div class="keyart_layer parallax" id="cuadradito" data-speed="15"></div>
+            <div class="keyart_layer parallax" id="rectangulo" data-speed="15"></div>  
+        </div>
+        <div class="seccion-datos">
+            <div class="seccion-paneles">
+                <div class="panel-1 escondido"></div> 
+                <div class="panel-2 escondido"></div>
+                <div class="panel-3 escondido"></div>                          
+            </div>          
+            <div class="seccion-texto">
+                <div class="texto-1 escondido">
+                    <p>Los niños descubrirán lo divertido que puede ser aprender matemáticas. A través de personajes animados y desafíos interactivos, podrán sumar, restar y entender conceptos básicos de manera fácil y entretenida. ¡Cada número cobra vida para hacer que las matemáticas sean emocionantes!</p>
+                </div>
+                <div class="texto-2 escondido">
+                    <p>Con NumberBlocks, los niños encontrarán emocionantes retos en cada nivel, diseñados para hacer que el aprendizaje sea tan divertido como un juego. ¡Cada desafío es una nueva aventura matemática! Diviértete e invita a tus amigos, desafíalos y gana premios.</p>
+                </div>
+                <div class="texto-3 escondido">
+                    <p>Entrena a UNO y Comparte lo que Aprendes! En NumberBlocks, deberás enseñar a UNO cada lección que aprendas, ayudándolo a crecer y superar nuevos desafíos matemáticos. ¡Conviértete en su mejor guía! Se su mejor amigo y diviértete con él.</p>
+                </div>
+            </div>            
+        </div>
+
+        
+
+    </div>
+
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
