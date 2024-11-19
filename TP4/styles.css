@@ -626,6 +626,7 @@ p {
     background-size: cover;
     height: 1157px;
     width: 100%;
+    margin-bottom: 0px;
     position: relative; /* Permite posicionar elementos hijos como el texto */
 }
 
@@ -687,4 +688,54 @@ p {
 .overlay-button:hover {
     background-color: #83C252;
     color: white;
+}
+
+.seccion-mas-amigos-mas-diversion {
+    margin-top: 0px;
+    background-color: white;
+}
+
+.titulo-seccion-mas-amigos {
+    font-size: 55px;
+    color: #000000;
+    margin-top: 0px;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+
+.contenedor {
+    display: flex;
+    align-items: flex-start; /* Alinea la imagen y los textos en la parte superior */
+    padding-left: 243px;
+}
+
+.img-mas-amigos {
+    width: 291px;
+    height: 436px;
+}
+
+.textos {
+    padding-top: 50px;
+    padding-left: 185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.bloque-texto {
+    width: 467px; /* Ancho fijo de cada bloque de texto */
+    margin-bottom: 267px; /* Espaciado entre bloques de texto */
+}
+
+h2.titulo-texto {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.descripcion-texto {
+    font-size: 20px;
+    color: #333;
+    line-height: 18.9px;
 }
