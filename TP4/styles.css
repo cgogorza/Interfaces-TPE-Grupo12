@@ -621,3 +621,71 @@ p {
          transform: translateY(0px);
      }
 }
+
+.violet-background {
+    background-image: url('images/Rectangle26.png');
+    background-size: cover;
+    height: 1157px;
+    width: 100%;
+    position: relative; /* Permite posicionar elementos hijos como el texto */
+}
+
+.violet-background-container {
+    position: relative; /* Necesario para que los elementos dentro se puedan posicionar relativamente */
+    width: 100%; /* Ancho del contenedor */
+    background-color: white;
+}
+
+.overlay-image {
+    position: absolute; /* Coloca la imagen superpuesta dentro del contenedor */
+    bottom: 0;
+    width: 100%;
+    overflow: hidden; /* Oculta las partes que sobresalgan */
+}
+
+.overlay-image img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.113) translateX(2.2%); /* Aplica zoom y mueve la imagen a la derecha */
+    transform-origin: center center; /* Mantiene el punto de referencia en el centro */
+}
+
+.overlay-text {
+    position: absolute; /* Superpone el texto */
+    top: 16%; /* Ajusta la posición vertical */
+    left: 50%; /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto en el contenedor */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-size: 61px; /* Ajusta el tamaño del texto según necesidad */
+    z-index: 2; /* Asegura que el texto esté encima de las imágenes */
+    width: 950px;
+    font-style: italic;
+}
+
+.overlay-button {
+    position: absolute;
+    top: 36%; /* Ajusta para que quede debajo del texto */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #83C252;
+    color: white;
+    border: 7px solid white;
+    border-radius: 40px; /* Hace que los bordes sean redondeados */
+    padding: 10px 20px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    z-index: 2;
+    transition: background-color 0.3s, color 0.3s;
+    width: 525px;
+    height: 70px;
+    font-weight: bold;
+    box-shadow: 2px 5px 0px #02187E, 2px 0px 0px #02187E; /* Sombra personalizada */
+}
+
+.overlay-button:hover {
+    background-color: #83C252;
+    color: white;
+}
