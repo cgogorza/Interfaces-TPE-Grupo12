@@ -23,6 +23,61 @@ main {
 }
 
 
+/* Contenedor del loader con imagen inicial */
+.loader-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: url('images/ff.svg');
+    width: 100%;
+    height: 720px;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté encima del contenido */
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+/* Estilo general para las pelotas */
+.loader-ball {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #FFF;
+    animation: move-circle 5s linear infinite;
+}
+
+/* Colores de las pelotas */
+.loader-ball.yellow { background-color: #FFEB3B; animation-delay: 0s; }
+.loader-ball.orange { background-color: #FF9800; animation-delay: 0.5s; }
+.loader-ball.red { background-color: #FF5722; animation-delay: 1s; }
+.loader-ball.purple { background-color: #9C27B0; animation-delay: 1.5s; }
+.loader-ball.light-green { background-color: #8BC34A; animation-delay: 2s; }
+.loader-ball.blue { background-color: #2196F3; animation-delay: 2.5s; }
+.loader-ball.pink { background-color: #E91E63; animation-delay: 3s; }
+.loader-ball.teal { background-color: #009688; animation-delay: 3.5s; }
+.loader-ball.lime { background-color: #CDDC39; animation-delay: 4s; }
+.loader-ball.cyan { background-color: #00BCD4; animation-delay: 4.5s; }
+
+/* Animación para mover las pelotas en un círculo */
+@keyframes move-circle {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    25% { transform: rotate(90deg) translateX(150px) rotate(-90deg); }
+    50% { transform: rotate(180deg) translateX(150px) rotate(-180deg); }
+    75% { transform: rotate(270deg) translateX(150px) rotate(-270deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/*Acá termina el loader*/
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -34,6 +89,85 @@ header {
     z-index: 1000;
     width: 1280px;
     padding: 20px 100px;
+}
+
+
+.menu{
+    position: fixed;
+    z-index: 98;
+    top: 16.8%;
+}
+
+.menu-usuario{
+    /* background-color: #660561; */
+    display: flex;
+    justify-content: space-between;
+    height: 274px;
+    width: 100%;
+    position: relative;
+    display: block;
+    z-index: 98;
+    transition: all .5s ease-in-out;
+    left: 0;
+}
+
+.cont1{
+    transition: .5s ease-in-out;
+}
+.cont2{
+    transition: .7s ease-in-out ;
+}
+.cont3{
+	transition: 1s ease-in-out;
+}
+
+.cont1,.cont2,.cont3 {
+    width: 100%;
+    background-color: #3a9dbd;
+	position: relative;
+	overflow: hidden;
+    cursor: pointer;
+    box-shadow: 4px 5px 0px 0px #027e40;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 19px;
+}
+
+.menu-usuario .cont1 span,.menu-usuario .cont2 span ,.menu-usuario .cont3 span   {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    height: 60px;
+    padding: 7% 5%;
+    color: #005628;
+    border: 5px solid rgb(18, 106, 46);
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.cont1::after,.cont2::after.cont3::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 100px);
+	border-bottom: 100px solid #970891;
+	border-right: 100px solid transparent;
+	transition: .4s ease-in-out all;
+}
+
+.cont1:hover::after,.cont2:hover::after,.cont3:hover::after {
+	left: 0;
+}
+
+.cont1 h2,.cont2 h2,.cont3 h2{
+    width: auto;
+    padding: 0px 10px;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 
