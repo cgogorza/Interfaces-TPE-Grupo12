@@ -5,6 +5,7 @@ let lin3 = document.getElementById('lin3');
 let nav = document.getElementById('nav');
 let header = document.getElementById('header');
 
+
 // Elementos de la sección
 let pasto1 = document.querySelector('.container-pasto-1');
 let arbol3 = document.querySelector('.container-arbol-3');
@@ -24,7 +25,7 @@ let logo = document.querySelector('.logo');
 
 let personaje5 = document.getElementById('personaje-5');
 let personaje4 = document.getElementById('personaje-4');
-let textoSeccionMasDivertida = document.getElementById('container-texto-seccion-mas-divertida');
+//let textoSeccionMasDivertida = document.getElementById('container-texto-seccion-mas-divertida');
 let containterImgGaleria = document.getElementById('container-img-galeria');
 
 let seccion1 = document.getElementById('seccion-1');
@@ -53,10 +54,10 @@ document.addEventListener('scroll', function (e) {
   if (scrollTop > 15) {
     logo.style.height = "86px";
     logo.style.width = "150px";
-    logo.style.top = "20px";
+    logo.style.top = "0px";
     logo.style.left = "45%";
     logo.style.position = "fixed";
-    header.style.backgroundColor = 'white';
+    header.style.backgroundColor = '#00D1D5';
   } else {
     logo.style.height = "320px";
     logo.style.width = "560px";
@@ -68,6 +69,7 @@ document.addEventListener('scroll', function (e) {
    moverSeccion1(scrollTop);
    moverSeccion2(scrollTop);
 });
+
 
 // Mover elementos de la Sección 1 con el scroll
 function moverSeccion1(scrollTop) {

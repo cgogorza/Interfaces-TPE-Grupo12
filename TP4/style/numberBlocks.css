@@ -12,7 +12,8 @@
 
 body{
     width: 1280px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -29,7 +30,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    background: url('images/ff.svg');
+    background: url('../images/ff.png');
     width: 100%;
     height: 720px;
     background-size: cover; 
@@ -83,12 +84,13 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%; 
-    height: 100px;
+    height: 80px;
     position: fixed;
     top: 0;
     z-index: 1000;
     width: 1280px;
     padding: 20px 100px;
+    background-color: #00D1D5;
 }
 
 
@@ -132,6 +134,9 @@ header {
     font-size: 20px;
     line-height: 19px;
 }
+/**/
+
+
 
 .menu-usuario .cont1 span,.menu-usuario .cont2 span ,.menu-usuario .cont3 span   {
     display: grid;
@@ -660,7 +665,7 @@ nav ul li:nth-child(5) {
 }
 .container-personaje-4{
     position: absolute;
-    top: 600px;
+    top: 800px; /*le subí a 800px el top para que no tape el cuadro*/
 }
 
 .container-personaje-4 > img {
@@ -678,8 +683,8 @@ nav ul li:nth-child(5) {
     margin-left: 100px;
     margin-top: 50px;
     transition: top 0.2s ease, left 0.2s ease, right 0.2s ease;
-
 }
+
 .titulo-seccion-2 {
     z-index: 20;
     width: 508px;
