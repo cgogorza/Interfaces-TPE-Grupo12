@@ -1384,25 +1384,27 @@ nav ul li:nth-child(5) {
     width: 83.3px;
     height: 87px;
     bottom: 400px;
-    right: 80px;
-    bottom: -100px;
+    right: 380px;
+    bottom: -350px;
     z-index: 10;
 }
 
 .number8-spritesheet {
-    animation: spritesheet 0.7s steps(6) infinite;
+    animation: spritesheet 0.4s steps(6) infinite;
 }
 
 .spritesheet3 {
-    width: 231px;
-    height: 151px;
+    width: 130px;
+    height: 200px;
     z-index: 10;
     right: 30px;
-    bottom: -300px;
+    bottom: -400px;
 }
 
 .block-spritesheet {
     animation: spritesheet 0.4s steps(4) infinite;
+    position: relative;
+    left: 3px;
 }
 
 @keyframes spritesheet {
