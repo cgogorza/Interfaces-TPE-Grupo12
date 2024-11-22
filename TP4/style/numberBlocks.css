@@ -97,7 +97,7 @@ header {
 .menu{
     position: fixed;
     z-index: 98;
-    top: 16.8%;
+    padding-top: 80px;
 }
 
 .menu-usuario{
@@ -263,13 +263,12 @@ header #btn-menu .barras{
 }
 
 .nav {
-    position: fixed;
     display: none;
     top: 90px; 
     left: 300px;
     width: 15%;
     z-index: 1000000;
-    padding: 10px 0;
+    padding: 0px 0;
 }
 nav ul {
     list-style: none; 
@@ -1369,15 +1368,18 @@ nav ul li:nth-child(5) {
     position: absolute;
 }
 
+/* Contenedor del spritesheet */
 .spritesheet1 {
-    width: 81px; /* ancho de la imagen / #columnas */
-    height: 78px;
-    bottom: 71px;
-    left: 15px;
+    width: 75px; /* Ancho del frame que se va a mostrar */
+    height: 78px; /* Alto del frame */
+    overflow: hidden; /* Oculta el resto de la imagen que no está en el frame */
+    position: relative;
+    z-index: 10;
 }
-
 .character-spritesheet {
-    animation: spritesheet 1s steps(10) infinite;
+    width: 729px; /* Ancho total de la imagen (81px * 9 frames) */
+    height: 78px; /* Alto del frame */
+    animation: spritesheet 1s steps(9) infinite; /* Desplaza la imagen a través de los frames */
 }
 
 .spritesheet2 {
